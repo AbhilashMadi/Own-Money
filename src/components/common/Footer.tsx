@@ -3,7 +3,7 @@ import {FC} from "react";
 const Footer:FC = () => {
   return (
     <footer>
-      Footer
+      Footer assigned to omkar
     </footer>
   );
 };
