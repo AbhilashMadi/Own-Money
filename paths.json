@@ -37,6 +37,9 @@
       ],
       "@context/*": [
         "./src/components/context/*"
+      ],
+      "@lib/*": [
+        "./src/lib/*"
       ]
     }
   }

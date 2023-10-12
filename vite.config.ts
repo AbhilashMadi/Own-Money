@@ -26,6 +26,7 @@ export default defineConfig({
       "@ui": path.resolve(__dirname,"src/components/ui"),
       "@keys": path.resolve(__dirname,"src/keys"),
       "@context": path.resolve(__dirname,"src/components/context"),
+      "@lib": path.resolve(__dirname,"src/lib"),
     },
   },
 });
