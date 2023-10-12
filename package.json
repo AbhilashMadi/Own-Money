@@ -4,9 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 3000",
+    "dev": "vite --port 8080",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:rules": "eslint  . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --rulesdir rules",
     "preview": "vite preview",
     "lint:fix": "eslint --fix . --ext ts,tsx"
   },
@@ -16,6 +17,7 @@
     "react-router-dom": "^6.16.0"
   },
   "devDependencies": {
+    "@types/node": "^20.8.4",
     "@types/react": "^18.2.28",
     "@types/react-dom": "^18.2.13",
     "@typescript-eslint/eslint-plugin": "^6.7.5",

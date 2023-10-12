@@ -22,8 +22,8 @@ const Login: LazyExoticComponent<FC> = lazy(() => import("@components/pages/Logi
  */
 
 const routesMap = new Map<string, RouteObject>();
-routesMap.set(Paths.LANDING, routeObjectGenerator(Paths.LANDING, LandingPage, headers.ownMoney));
-routesMap.set(Paths.REGISTER, routeObjectGenerator(Paths.REGISTER, Register, headers.register));
-routesMap.set(Paths.LOGIN_IN, routeObjectGenerator(Paths.LOGIN_IN, Login, headers.logIn));
+routesMap.set(Paths.LANDING, routeObjectGenerator(Paths.LANDING, LandingPage, false, headers.ownMoney));
+routesMap.set(Paths.REGISTER, routeObjectGenerator(Paths.REGISTER, Register, false, headers.register));
+routesMap.set(Paths.LOGIN_IN, routeObjectGenerator(Paths.LOGIN_IN, Login, false, headers.logIn));
 
 export default routesMap;

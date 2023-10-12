@@ -23,6 +23,6 @@ module.exports = {
     'no-unused-vars': 'warn',
     'no-undef': 'error',
     'comma-dangle': ['error', 'always-multiline'],
-    // 'custom-imports.ts': 'error',
+    // 'custom-imports': 'error',
   },
 };
