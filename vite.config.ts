@@ -23,6 +23,7 @@ export default defineConfig({
       "@static": path.resolve(__dirname, "src/static"),
       "@types_": path.resolve(__dirname, "src/types"),
       "@styles": path.resolve(__dirname, "src/styles"),
+      "@ui": path.resolve(__dirname,"src/components/ui"),
     },
   },
 });

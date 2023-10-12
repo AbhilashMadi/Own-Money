@@ -1,8 +1,13 @@
-import {FC} from "react";
+import { FC } from "react";
+import { Button } from "@ui/button";
 
-const LandingPage:FC = () => {
+const LandingPage: FC = () => {
   return (
-    <div>LandingPage</div>
+    <div>
+      <Button>
+        Hello From Shadcn UI
+      </Button>
+    </div>
   );
 };
 
