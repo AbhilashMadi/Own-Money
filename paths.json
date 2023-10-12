@@ -31,6 +31,12 @@
       ],
       "@ui/*": [
         "./src/components/ui/*"
+      ],
+      "@keys/*": [
+        "./src/keys/*"
+      ],
+      "@context/*": [
+        "./src/components/context/*"
       ]
     }
   }

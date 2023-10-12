@@ -2,7 +2,7 @@ import { lazy, LazyExoticComponent, FC } from "react";
 
 import { routeObjectGenerator } from "@helpers/routes.helpers";
 import { headers } from "@resources/headers";
-import { Paths } from "@routes/paths";
+import { Paths } from "@types_/constants.enums";
 import { type RouteObject } from "@types_/routes.types";
 
 /**

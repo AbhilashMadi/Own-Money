@@ -21,9 +21,11 @@ export default defineConfig({
       "@resources": path.resolve(__dirname, "src/resources"),
       "@routes": path.resolve(__dirname, "src/routes"),
       "@static": path.resolve(__dirname, "src/static"),
-      "@types_": path.resolve(__dirname, "src/types"),
+      "@types_": path.resolve(__dirname, "src/types_"),
       "@styles": path.resolve(__dirname, "src/styles"),
       "@ui": path.resolve(__dirname,"src/components/ui"),
+      "@keys": path.resolve(__dirname,"src/keys"),
+      "@context": path.resolve(__dirname,"src/components/context"),
     },
   },
 });

@@ -1,9 +1,13 @@
 import { FC } from "react";
 
-const Navbar:FC = () => {
+import { useTheme } from "@context/context";
+
+const Navbar: FC = () => {
+  const { theme } = useTheme();
+
   return (
     <nav>
-      Navbar
+      {theme}
     </nav>
   );
 };
