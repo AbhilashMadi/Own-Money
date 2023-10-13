@@ -3,7 +3,7 @@ import {FC} from "react";
 const LogIn:FC = () => {
   return (
     <section>
-      LogIn
+      LogIn Screen
     </section>
   );
 };
