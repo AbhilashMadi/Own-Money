@@ -8,6 +8,6 @@ export enum ThemeKeys {
 
 export enum Paths {
   LANDING = "/",
-  REGISTER = "/register",
+  SIGN_UP = "/sign-up",
   LOGIN_IN = "/log-in",
 }
