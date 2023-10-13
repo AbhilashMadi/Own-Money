@@ -12,14 +12,14 @@ const Layout: FC<ILayout> = (props) => {
   const { children } = props;
 
   return (
-    <>
+    <div className="min-h-screen w-full font-inter">
       <AnnouncementBar />
       <Navbar />
       <Wrapper>
         {children}
       </Wrapper>
       <Footer />
-    </>
+    </div>
   );
 };
 

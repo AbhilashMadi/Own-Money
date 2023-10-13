@@ -6,6 +6,6 @@
 
 export const headers: { [key: string]: string } = {
   ownMoney: "Own Money",
-  register: "Register",
-  logIn: "LogIn",
+  signUp: "Sign up",
+  logIn: "Log in",
 };

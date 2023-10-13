@@ -1,11 +1,11 @@
 import {FC} from "react";
 
-const Login:FC = () => {
+const LogIn:FC = () => {
   return (
     <section>
-      Login
+      LogIn
     </section>
   );
 };
 
-export default Login;
+export default LogIn;

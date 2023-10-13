@@ -1,11 +1,11 @@
 import { FC } from "react";
 
-const Register:FC = () => {
+const SignUp:FC = () => {
   return (
     <section>
-      Register
+      SignUp
     </section>
   );
 };
 
-export default Register;
+export default SignUp;
