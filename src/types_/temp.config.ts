@@ -1,5 +1,11 @@
 import { ReactNode } from "react";
 
+export type Highlight = {
+  icon: ReactNode;
+  headline: string;
+  description: string;
+}
+
 export type HeroConfig = {
   background: string;
   heroImage: string;
@@ -7,9 +13,5 @@ export type HeroConfig = {
   headline: string;
   description: string;
 
-  highlights: {
-    icon: ReactNode;
-    healine: string;
-    description: string;
-  }[],
+  highlights: Highlight[];
 };
