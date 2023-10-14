@@ -77,6 +77,7 @@ module.exports = {
       },
       backgroundImage: {
         "hero-pattern": "url(../src/assets/herobackgrond.svg)",
+        "hero-dark-pattern": "url(../src/assets/darkherobackground.svg)",
       },
     },
   },
