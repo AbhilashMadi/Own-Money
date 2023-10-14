@@ -1,0 +1,37 @@
+<svg width="250" height="250" viewBox="0 0 250 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_13_254)">
+<rect width="250" height="250" fill="#FF993B"/>
+<g style="mix-blend-mode:overlay" opacity="0.5">
+<path d="M0 0H250V250H0V0Z" fill="url(#paint0_radial_13_254)"/>
+</g>
+<g opacity="0.2" clip-path="url(#clip1_13_254)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M125 250L125 8.53738e-08L126.953 0L126.953 250L125 250Z" fill="#F5F9FC"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1.70748e-07 125L250 125L250 126.953L0 126.953L1.70748e-07 125Z" fill="#F5F9FC"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M234.775 236.142L13.7153 15.0825L15.0963 13.7014L236.156 234.761L234.775 236.142Z" fill="#F5F9FC"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.9384 237.382L237.211 16.1097L235.83 14.7286L14.5574 236.001L15.9384 237.382Z" fill="#F5F9FC"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M203.125 1.95312H46.875C22.0653 1.95312 1.95312 22.0653 1.95312 46.875V203.125C1.95312 227.935 22.0653 248.047 46.875 248.047H203.125C227.935 248.047 248.047 227.935 248.047 203.125V46.875C248.047 22.0653 227.935 1.95312 203.125 1.95312ZM46.875 0C20.9867 0 0 20.9867 0 46.875V203.125C0 229.013 20.9867 250 46.875 250H203.125C229.013 250 250 229.013 250 203.125V46.875C250 20.9867 229.013 0 203.125 0H46.875Z" fill="#F5F9FC"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M171.875 33.2031H78.125C53.3153 33.2031 33.2031 53.3153 33.2031 78.125V171.875C33.2031 196.685 53.3153 216.797 78.125 216.797H171.875C196.685 216.797 216.797 196.685 216.797 171.875V78.125C216.797 53.3153 196.685 33.2031 171.875 33.2031ZM78.125 31.25C52.2367 31.25 31.25 52.2367 31.25 78.125V171.875C31.25 197.763 52.2367 218.75 78.125 218.75H171.875C197.763 218.75 218.75 197.763 218.75 171.875V78.125C218.75 52.2367 197.763 31.25 171.875 31.25H78.125Z" fill="#F5F9FC"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M125 193.359C162.754 193.359 193.359 162.754 193.359 125C193.359 87.2462 162.754 56.6406 125 56.6406C87.2462 56.6406 56.6406 87.2462 56.6406 125C56.6406 162.754 87.2462 193.359 125 193.359ZM125 195.312C163.833 195.312 195.312 163.833 195.312 125C195.312 86.1675 163.833 54.6875 125 54.6875C86.1675 54.6875 54.6875 86.1675 54.6875 125C54.6875 163.833 86.1675 195.312 125 195.312Z" fill="#F5F9FC"/>
+</g>
+</g>
+<g clip-path="url(#clip2_13_254)">
+<path d="M124.931 194.572C161.392 194.572 190.949 165.301 190.949 129.193C190.949 93.086 161.392 63.8151 124.931 63.8151C88.4698 63.8151 58.9123 93.086 58.9123 129.193C58.9123 165.301 88.4698 194.572 124.931 194.572Z" stroke="white" stroke-opacity="0.8" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M98.474 129.928H151.388" stroke="white" stroke-opacity="0.8" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M124.684 102.993V155.884" stroke="white" stroke-opacity="0.8" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_13_254" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(33.2031 37.1094) rotate(44.4791) scale(303.848)">
+<stop stop-color="white" stop-opacity="0.79"/>
+<stop offset="1"/>
+</radialGradient>
+<clipPath id="clip0_13_254">
+<rect width="250" height="250" rx="50" fill="white"/>
+</clipPath>
+<clipPath id="clip1_13_254">
+<rect width="250" height="250" fill="white"/>
+</clipPath>
+<clipPath id="clip2_13_254">
+<rect x="51" y="55" width="152" height="143" rx="50" fill="white"/>
+</clipPath>
+</defs>
+</svg>
