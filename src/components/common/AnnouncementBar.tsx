@@ -20,9 +20,9 @@ const AnnouncementBar: FC = () => {
           </Link>
         </p>
 
-        <div className="flex place-content-end rounded-full">
+        <button className="flex place-content-end rounded-full">
           <X size={16} className="cursor-pointer" />
-        </div>
+        </button>
       </div>
     </header>
   );

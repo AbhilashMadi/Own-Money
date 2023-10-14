@@ -1,12 +1,11 @@
 import { FC } from "react";
-import { Button } from "@ui/button";
+
+import Hero from "@components/containers/hero/Hero";
 
 const LandingPage: FC = () => {
   return (
     <div>
-      <Button>
-        Hello From Shadcn UI
-      </Button>
+      <Hero />
     </div>
   );
 };

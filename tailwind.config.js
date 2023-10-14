@@ -18,6 +18,7 @@ module.exports = {
     fontFamily: {
       "inter": ["var(--font-inter)"],
       "mono": ["var(--font-mono)"],
+      "mont": ["var(--font-mont)"],
     },
     extend: {
       colors: {
@@ -74,7 +75,15 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      backgroundImage: {
+        "hero-pattern": "url(../src/assets/herobackgrond.svg)",
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  variants: {
+    extends: {
+      animation: ["group-hover"],
+    },
+  },
+  plugins: [require('tailwindcss-animated')],
 };
