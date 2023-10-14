@@ -2,6 +2,8 @@ import { FC } from "react";
 
 import { type FeatureCad } from "@temp/featuresConfig";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@ui/card";
+import { useInView } from "react-intersection-observer";
+import { cn } from "@lib/utils";
 
 interface IDashbordFeatureCard {
   item: FeatureCad;
@@ -9,9 +11,12 @@ interface IDashbordFeatureCard {
 
 const DashboardFeatureCard: FC<IDashbordFeatureCard> = (props) => {
   const { item } = props;
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+  });
 
   return (
-    <Card className="hover:shadow-lg transition-shadow">
+    <Card ref={ref} className={cn("hover:shadow-lg transition-shadow", inView && "animate-fade-up")}>
       <CardHeader>
         <CardTitle>{item.header}</CardTitle>
       </CardHeader>

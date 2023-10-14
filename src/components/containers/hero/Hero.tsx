@@ -12,7 +12,7 @@ const Hero: FC = () => {
 
   return (
     <section className="bg-hero-pattern dark:bg-hero-dark-pattern my-10 rounded-2xl p-8 space-y-8 bg-cover bg-center">
-      <div className="flex justify-between">
+      <div className="flex justify-between items-center">
         <p className="leading-7 [&:not(:first-child)]:mt-6 uppercase font-medium space-x-1 
           tracking-[0.15rem] hover:tracking-[0.25rem] 
           transition-all duration-500 font-mont animate-fade-up">{heroConfig.tagline}</p>
@@ -26,7 +26,7 @@ const Hero: FC = () => {
           </TabsList>
         </Tabs>
       </div>
-      <div className="flex flex-wrap gap-4 xl:gap-0">
+      <div className="flex items-center flex-wrap gap-6 xl:gap-0">
         <div className="space-y-5 w-full xl:w-3/4">
           <h1 className="scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-4xl bg-gradient-to-br from-zinc-900 to-neutral-50 dark:to-zinc-900 dark:from-neutral-50 inline-block text-transparent bg-clip-text animate-fade-up animate-delay-100">{heroConfig.headline}</h1>
           <p className="leading-6 [&:not(:first-child)]:mt-6 font-mont font-medium animate-fade-up animate-delay-200">{heroConfig.description}</p>
