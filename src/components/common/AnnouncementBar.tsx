@@ -6,7 +6,7 @@ const AnnouncementBar: FC = () => {
 
   return (
     <header className="bg-primary text-sm ">
-      <div className="container inline-grid items-center h-10 grid-cols-3">
+      <div className="container inline-grid items-center p-2 grid-cols-3">
         <div></div>
         <p className="flex items-center gap-2 place-content-center">
           <span className="font-bold">
@@ -20,7 +20,7 @@ const AnnouncementBar: FC = () => {
           </Link>
         </p>
 
-        <div className="flex place-content-end">
+        <div className="flex place-content-end rounded-full">
           <X size={16} className="cursor-pointer" />
         </div>
       </div>

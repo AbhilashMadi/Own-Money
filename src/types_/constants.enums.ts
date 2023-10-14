@@ -11,3 +11,7 @@ export enum Paths {
   SIGN_UP = "/sign-up",
   LOGIN_IN = "/log-in",
 }
+
+export enum Actions {
+  SET_SOMETHING = "set_something",
+}
