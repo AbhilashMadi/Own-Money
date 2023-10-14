@@ -15,13 +15,13 @@ const Hero: FC = () => {
           <p className="leading-6 [&:not(:first-child)]:mt-6 font-mont font-medium">{heroConfig.description}</p>
         </div>
         <div>
-          <img src={heroConfig.heroImage} alt="Hero Image" className="object-cover w-[225px] h-[225px] mx-auto animate-spin animate-infinite animate-duration-[6000ms] animate-delay-0 animate-ease-linear animate-normal animate-fill-both" />
+          <img src={heroConfig.heroImage} alt="Hero Image" className="object-cover w-[225px] h-[225px] mx-auto animate-spin animate-infinite animate-duration-[7000ms] animate-delay-0 animate-ease-linear animate-normal animate-fill-both" />
         </div>
       </div>
 
       <div className="grid grid-cols-2 gap-6">
         {heroConfig.highlights.map((item) => {
-          return <FeatureItem item={item} />;
+          return <FeatureItem item={item} key={item.headline}/>;
         })}
       </div>
     </section >
