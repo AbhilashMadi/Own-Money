@@ -10,7 +10,7 @@ const FeatureItem: FC<IFeatureItem> = (props) => {
   const { item } = props;
 
   return (
-    <div className="flex gap-4 animate-fade-up">
+    <div className="flex gap-4 animate-fade-up animate-delay-300">
       <span className="self-start pt-1 text-primary">{item.icon}</span>
       <div>
         <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">{item.headline}</h4>
