@@ -11,7 +11,7 @@ const Hero: FC = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <section className="bg-hero-pattern dark:bg-hero-dark-pattern my-10 rounded-2xl p-8 space-y-8 bg-cover bg-center">
+    <section className="bg-hero-pattern dark:bg-hero-dark-pattern my-8 rounded-2xl p-8 space-y-8 bg-cover bg-center">
       <div className="flex justify-between items-center">
         <p className="leading-7 [&:not(:first-child)]:mt-6 uppercase font-medium space-x-1 
           tracking-[0.15rem] hover:tracking-[0.25rem] 
