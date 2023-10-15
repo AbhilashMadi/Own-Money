@@ -5,7 +5,7 @@ import { X } from "lucide-react";
 const AnnouncementBar: FC = () => {
 
   return (
-    <header className="bg-primary text-sm animate-fade-down animate-delay-2000">
+    <header className="bg-primary animate-fade-down animate-delay-2000 text-xs md:text-sm">
       <div className="p-2 flex container">
         <div className="grow">
           <p className="flex justify-center gap-2">
