@@ -6,7 +6,7 @@ const AnnouncementBar: FC = () => {
 
   return (
     <header className="bg-primary animate-fade-down animate-delay-2000 text-xs md:text-sm">
-      <div className="p-2 flex container">
+      <div className="p-2 flex container align-middle">
         <div className="grow">
           <p className="flex justify-center gap-2">
             <span className="font-bold">Announcment bar</span>
