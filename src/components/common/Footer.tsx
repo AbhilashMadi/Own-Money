@@ -1,6 +1,7 @@
 import { FC } from "react";
 
 const Footer: FC = () => {
+  // netlify badge [![Netlify Status](https://api.netlify.com/api/v1/badges/e9e894ca-1367-47ef-8eab-fcc09c162185/deploy-status)](https://app.netlify.com/sites/own-money/deploys)
   return (
     <footer className="bg-zinc-800 dark:bg-primary text-neutral-50">
       <div className="mx-auto w-full max-w-screen-xl md:px-20 space-y-12 px-8 pb-0 pt-8">
@@ -10,9 +11,23 @@ const Footer: FC = () => {
             <p>The best design for your web studio website. Vitae nulla nunc euismod vel pretium tellus accumsan semper. Vitae nulla nunc euismod vel pretium tellus accumsan semper.
             </p>
           </div>
-          <div>col1</div>
-          <div>col2</div>
-          <div>col3</div>
+          <div>
+            <ul>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+            </ul>
+          </div>
+          <div><ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ul></div>
+          <div><ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ul></div>
         </div>
         <div className="flex justify-between border-t border-neutral-600 py-4">
           <span>&copy;2023 Own Money</span>
