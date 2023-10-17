@@ -12,22 +12,27 @@ const Footer: FC = () => {
             </p>
           </div>
           <div>
+            <p>Header</p>
             <ul>
               <li>1</li>
               <li>2</li>
               <li>3</li>
             </ul>
           </div>
-          <div><ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-          </ul></div>
-          <div><ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-          </ul></div>
+          <div>
+            <p>Header</p>
+            <ul>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+            </ul></div>
+          <div>
+            <p>Header</p>
+            <ul>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+            </ul></div>
         </div>
         <div className="flex justify-between border-t border-neutral-600 py-4">
           <span>&copy;2023 Own Money</span>
