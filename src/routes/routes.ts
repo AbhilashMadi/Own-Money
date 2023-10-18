@@ -13,6 +13,7 @@ import { type RouteObject } from "@types_/routes.types";
 const LandingPage: LazyExoticComponent<FC> = lazy(() => import("@components/pages/LandingPage"));
 const SignUP: LazyExoticComponent<FC> = lazy(() => import("@components/pages/SignUp"));
 const LogIn: LazyExoticComponent<FC> = lazy(() => import("@components/pages/LogIn"));
+const Authontication: LazyExoticComponent<FC> = lazy(() => import("@components/pages/Authontication"));
 
 /**
  * Route Objects declaration, each object should have the following properties:
@@ -25,5 +26,6 @@ const routesMap = new Map<string, RouteObject>();
 routesMap.set(Paths.LANDING, routeObjectGenerator(Paths.LANDING, LandingPage, false, headers.ownMoney));
 routesMap.set(Paths.SIGN_UP, routeObjectGenerator(Paths.SIGN_UP, SignUP, false, headers.signUp));
 routesMap.set(Paths.LOGIN_IN, routeObjectGenerator(Paths.LOGIN_IN, LogIn, false, headers.logIn));
+routesMap.set(Paths.AUTHONTICATION, routeObjectGenerator(Paths.AUTHONTICATION, Authontication, false, headers.account));
 
 export default routesMap;

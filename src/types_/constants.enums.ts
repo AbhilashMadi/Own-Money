@@ -10,6 +10,7 @@ export enum Paths {
   LANDING = "/",
   SIGN_UP = "/sign-up",
   LOGIN_IN = "/log-in",
+  AUTHONTICATION = "/auth",
 }
 
 export enum Actions {
