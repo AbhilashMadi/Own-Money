@@ -11,9 +11,8 @@ import { type RouteObject } from "@types_/routes.types";
  * @example "LandingPage"
  */
 const LandingPage: LazyExoticComponent<FC> = lazy(() => import("@components/pages/LandingPage"));
-const SignUP: LazyExoticComponent<FC> = lazy(() => import("@components/pages/SignUp"));
-const LogIn: LazyExoticComponent<FC> = lazy(() => import("@components/pages/LogIn"));
 const Authontication: LazyExoticComponent<FC> = lazy(() => import("@components/pages/Authontication"));
+const OTPForm: LazyExoticComponent<FC> = lazy(() => import("@components/forms/OTPForm"));
 
 /**
  * Route Objects declaration, each object should have the following properties:
@@ -23,9 +22,8 @@ const Authontication: LazyExoticComponent<FC> = lazy(() => import("@components/p
  */
 
 const routesMap = new Map<string, RouteObject>();
-routesMap.set(Paths.LANDING, routeObjectGenerator(Paths.LANDING, LandingPage, false, headers.ownMoney));
-routesMap.set(Paths.SIGN_UP, routeObjectGenerator(Paths.SIGN_UP, SignUP, false, headers.signUp));
-routesMap.set(Paths.LOGIN_IN, routeObjectGenerator(Paths.LOGIN_IN, LogIn, false, headers.logIn));
-routesMap.set(Paths.AUTHONTICATION, routeObjectGenerator(Paths.AUTHONTICATION, Authontication, false, headers.account));
+routesMap.set(Paths.LANDING, routeObjectGenerator(Paths.LANDING, LandingPage, false, true, headers.ownMoney));
+routesMap.set(Paths.AUTHONTICATION, routeObjectGenerator(Paths.AUTHONTICATION, Authontication, false, false, headers.account));
+routesMap.set(Paths.OTP, routeObjectGenerator(Paths.OTP, OTPForm, false, false, headers.otpVerification));
 
 export default routesMap;
