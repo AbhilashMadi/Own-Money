@@ -20,9 +20,15 @@ const Hero: FC = () => {
         {/*Theme Tabs */}
         <Tabs className="shadow-md hover:shadow-lg transition-all animate-fade-up">
           <TabsList defaultValue={theme} className="p-1 h-9">
-            <TabsTrigger value={ThemeKeys.LIGHT} onClick={() => setTheme(ThemeKeys.LIGHT)}><Sun size={16} /></TabsTrigger>
-            <TabsTrigger value={ThemeKeys.DARK} onClick={() => setTheme(ThemeKeys.DARK)}><Moon size={16} /></TabsTrigger>
-            <TabsTrigger value={ThemeKeys.SYSTEM} onClick={() => setTheme(ThemeKeys.SYSTEM)}><Computer size={16} /></TabsTrigger>
+            <TabsTrigger value={ThemeKeys.LIGHT} onClick={() => setTheme(ThemeKeys.LIGHT)}>
+              <Sun size={16} />
+            </TabsTrigger>
+            <TabsTrigger value={ThemeKeys.DARK} onClick={() => setTheme(ThemeKeys.DARK)}>
+              <Moon size={16} />
+            </TabsTrigger>
+            <TabsTrigger value={ThemeKeys.SYSTEM} onClick={() => setTheme(ThemeKeys.SYSTEM)}>
+              <Computer size={16} />
+            </TabsTrigger>
           </TabsList>
         </Tabs>
       </div>
@@ -38,7 +44,7 @@ const Hero: FC = () => {
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {heroConfig.highlights.map((item) => {
-          return <FeatureItem item={item} key={item.headline}/>;
+          return <FeatureItem item={item} key={item.headline} />;
         })}
       </div>
     </section >
