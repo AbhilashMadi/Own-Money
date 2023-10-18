@@ -22,8 +22,8 @@ const OTPForm: LazyExoticComponent<FC> = lazy(() => import("@components/forms/OT
  */
 
 const routesMap = new Map<string, RouteObject>();
-routesMap.set(Paths.LANDING, routeObjectGenerator(Paths.LANDING, LandingPage, false, headers.ownMoney));
-routesMap.set(Paths.AUTHONTICATION, routeObjectGenerator(Paths.AUTHONTICATION, Authontication, false, headers.account));
-routesMap.set(Paths.OTP, routeObjectGenerator(Paths.OTP, OTPForm, false, headers.otpVerification));
+routesMap.set(Paths.LANDING, routeObjectGenerator(Paths.LANDING, LandingPage, false, true, headers.ownMoney));
+routesMap.set(Paths.AUTHONTICATION, routeObjectGenerator(Paths.AUTHONTICATION, Authontication, false, false, headers.account));
+routesMap.set(Paths.OTP, routeObjectGenerator(Paths.OTP, OTPForm, false, false, headers.otpVerification));
 
 export default routesMap;
