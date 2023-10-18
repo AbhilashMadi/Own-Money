@@ -7,7 +7,7 @@ import { headers } from "@resources/headers";
 import { text } from "@resources/text";
 import { labels } from "@resources/labels";
 
-const SignUp: FC = () => {
+const SignUpForm: FC = () => {
   return (
     <Card>
       <CardHeader>
@@ -38,4 +38,4 @@ const SignUp: FC = () => {
   );
 };
 
-export default SignUp;
+export default SignUpForm;

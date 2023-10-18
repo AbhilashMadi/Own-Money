@@ -7,7 +7,7 @@ import { labels } from "@resources/labels";
 import { headers } from "@resources/headers";
 import { text } from "@resources/text";
 
-const LogIn: FC = () => {
+const LogInForm: FC = () => {
 
   return (
     <Card>
@@ -35,4 +35,4 @@ const LogIn: FC = () => {
   );
 };
 
-export default LogIn;
+export default LogInForm;
