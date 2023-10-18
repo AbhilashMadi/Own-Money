@@ -6,4 +6,5 @@ export const labels:{ [key: string]: string } = {
   confirmPassword: "Confirm Password",
   getOTP: "Get OTP",
   reset: "Reset",
+  submit: "Submit",
 };

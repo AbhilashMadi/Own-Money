@@ -70,6 +70,14 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
         },
+        shake: {
+          "0%": { marginLeft: "0rem" },
+          "20%": { marginLeft: "0.5rem" },
+          "40%": { marginLeft: "-0.5rem" },
+          "60%": { marginLeft: "0.5rem" },
+          "80%": { marginLeft: "-0.5rem" },
+          "100%": { marginLeft: "0rem" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -86,5 +94,5 @@ module.exports = {
       animation: ["group-hover"],
     },
   },
-  plugins: [require('tailwindcss-animated')],
+  plugins: [require("tailwindcss-animated")],
 };
