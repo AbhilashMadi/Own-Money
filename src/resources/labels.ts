@@ -7,4 +7,6 @@ export const labels:{ [key: string]: string } = {
   getOTP: "Get OTP",
   reset: "Reset",
   submit: "Submit",
+  verifyAccount: "Verify Account",
+  resend: "Resend",
 };

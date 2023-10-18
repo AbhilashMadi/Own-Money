@@ -23,8 +23,9 @@ const OTPForm: FC = () => {
               <div><Input type="text" className="h-12 w-14 invalid:animate-shake animate-thrice" pattern="[0-9]*" /> </div>
             </form>
           </CardContent>
-          <CardFooter>
-            <Button className="w-full">{labels.submit}</Button>
+          <CardFooter className="flex gap-4">
+            <Button className="w-full" variant={"outline"}>{labels.resend}</Button>
+            <Button className="w-full">{labels.verifyAccount}</Button>
           </CardFooter>
         </Card>
       </section>
