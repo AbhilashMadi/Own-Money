@@ -4,5 +4,6 @@ export type RouteObject = {
   path: string;
   element: LazyExoticComponent<FC>;
   protectedRoute: boolean;
+  isLayout: boolean;
   name: string;
 }
