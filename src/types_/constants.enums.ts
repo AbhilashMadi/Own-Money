@@ -8,10 +8,15 @@ export enum ThemeKeys {
 
 export enum Paths {
   LANDING = "/",
-  SIGN_UP = "/sign-up",
-  LOGIN_IN = "/log-in",
+  AUTHONTICATION = "/auth",
+  OTP = "/otp",
 }
 
 export enum Actions {
   SET_SOMETHING = "set_something",
+}
+
+export enum TabKeys {
+  LOGIN = "login",
+  SIGNUP = "signup",
 }
