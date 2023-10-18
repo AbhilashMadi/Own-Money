@@ -21,9 +21,11 @@ const PageRoutes: FC = () => {
                 path={page.path}
                 element={page.protectedRoute
                   ? <p>Protected Route</p>
-                  : <Layout>
-                    <page.element />
-                  </Layout>} />;
+                  : page.isLayout
+                    ? <Layout>
+                      <page.element />
+                    </Layout>
+                    : <page.element />} />;
             })}
           </Routes>
         </BrowserRouter>

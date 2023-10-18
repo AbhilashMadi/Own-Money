@@ -12,4 +12,5 @@ export const headers: { [key: string]: string } = {
   credentials: "Credentials",
   details: "Details",
   register: "Register",
+  otpVerification:"OTP Verfication",
 };
