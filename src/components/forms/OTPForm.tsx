@@ -17,10 +17,10 @@ const OTPForm: FC = () => {
           </CardHeader>
           <CardContent>
             <form className="grid grid-cols-4">
-              <div><Input type="text" className="h-12 w-14 invalid:animate-shake animate-thrice" pattern="[0-9]*" /></div>
-              <div><Input type="text" className="h-12 w-14 invalid:animate-shake animate-thrice" pattern="[0-9]*" /></div>
-              <div><Input type="text" className="h-12 w-14 invalid:animate-shake animate-thrice" pattern="[0-9]*" /></div>
-              <div><Input type="text" className="h-12 w-14 invalid:animate-shake animate-thrice" pattern="[0-9]*" /> </div>
+              <div><Input type="text" className="h-12 w-14 invalid:animate-shake animate-thrice" pattern="[0-9]" /></div>
+              <div><Input type="text" className="h-12 w-14 invalid:animate-shake animate-thrice" pattern="[0-9]" /></div>
+              <div><Input type="text" className="h-12 w-14 invalid:animate-shake animate-thrice" pattern="[0-9]" /></div>
+              <div><Input type="text" className="h-12 w-14 invalid:animate-shake animate-thrice" pattern="[0-9]" /> </div>
             </form>
           </CardContent>
           <CardFooter className="flex gap-4">
