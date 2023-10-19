@@ -10,7 +10,13 @@ export enum Paths {
   LANDING = "/",
   AUTHONTICATION = "/auth",
   OTP = "/otp",
-  DASHBOARD = "/dashboard",
+  OVERVIEW = "/dashboard/overview",
+  BALANCES = "/dashboard/balances",
+  TRANSACTIONS = "/dashboard/transactions",
+  BILLS = "/dashboard/bills",
+  EXPENSES = "/dashboard/expenses",
+  GOALS = "/dashboard/goals",
+  SETTINGS = "/dashboard/settings",
   NOT_FOUND = "/*",
 }
 

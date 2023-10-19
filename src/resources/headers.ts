@@ -15,4 +15,11 @@ export const headers: { [key: string]: string } = {
   otpVerification:"OTP Verfication",
   notFound: "Not Found (404)",
   dashboard: "Dashboard",
+  overview: "Overview",
+  balances: "Balances",
+  transactions: "Transactions",
+  bills: "Bills",
+  expenses: "Expenses",
+  goals: "Goals",
+  Settings: "Settings",
 };
