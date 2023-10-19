@@ -31,6 +31,7 @@ const PageRoutes: FC = () => {
             {/* dashboard route (protected) */}
             {[...dashboardRoutes.values()].map((page: RouteObject) => {
               return <Route
+                key={page.name}
                 path={page.path}
                 element={<DashboardLayout>
                   <page.element />
