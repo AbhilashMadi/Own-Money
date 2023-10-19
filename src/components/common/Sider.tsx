@@ -1,17 +1,16 @@
 import { FC } from "react";
 
-import { Button } from "@ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@ui/card";
-import { CalendarDays, LayoutDashboard } from "lucide-react";
+import { CalendarDays } from "lucide-react";
 import { sidebarConfig } from "@temp/dashboardConfig";
 import { Avatar, AvatarFallback, AvatarImage } from "@ui/avatar";
 
 const Sider: FC = () => {
   return (
-    <aside className="w-64 shadow-lg transition-all">
+    <aside className="w-64 transition-all">
 
       {/*---- TOGGLE BUTTON ----*/}
-      <Button className="md:hidden"><LayoutDashboard /></Button>
+      {/* <Button className="md:hidden"><LayoutDashboard /></Button> */}
       {/*-----------------------*/}
 
       <Card className="rounded-none min-h-screen">
@@ -29,9 +28,9 @@ const Sider: FC = () => {
         <CardContent className="space-y-2">
           {sidebarConfig.navigations.map((obj) => {
             return <div key={obj.label}
-              className="flex gap-3 p-3 rounded hover:text-white hover:bg-primary dark:hover:bg-muted"
+              className="flex gap-3 p-3 rounded hover:text-white hover:bg-primary dark:hover:bg-muted bg-muted"
               role="button">
-              <obj.icon />{" "}
+              <obj.icon size={20} />{" "}
               <span>{obj.label}</span>
             </div>;
           })}
@@ -39,7 +38,7 @@ const Sider: FC = () => {
 
         <CardFooter className="space-y-2 flex-col">
           <div className="flex gap-3 p-3 bg-muted w-full rounded hover:bg-red-400 hover:text-white" role="button">
-            <sidebarConfig.logout.icon />{" "}
+            <sidebarConfig.logout.icon size={20}/>{" "}
             <span>{sidebarConfig.logout.label}</span>
           </div>
           <div className="flex justify-between space-x-4 bg-muted py-3 px-4 rounded" role="button">
