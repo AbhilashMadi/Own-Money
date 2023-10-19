@@ -13,4 +13,6 @@ export const headers: { [key: string]: string } = {
   details: "Details",
   register: "Register",
   otpVerification:"OTP Verfication",
+  notFound: "Not Found (404)",
+  dashboard: "Dashboard",
 };

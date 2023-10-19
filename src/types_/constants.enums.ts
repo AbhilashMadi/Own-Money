@@ -10,6 +10,8 @@ export enum Paths {
   LANDING = "/",
   AUTHONTICATION = "/auth",
   OTP = "/otp",
+  DASHBOARD = "/dashboard",
+  NOT_FOUND = "/*",
 }
 
 export enum Actions {
