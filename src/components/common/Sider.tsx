@@ -28,7 +28,7 @@ const Sider: FC = () => {
         <CardContent className="space-y-2">
           {sidebarConfig.navigations.map((obj) => {
             return <div key={obj.label}
-              className="flex gap-3 p-3 rounded hover:text-white hover:bg-primary dark:hover:bg-muted bg-muted"
+              className="flex gap-3 p-3 rounded hover:text-white hover:bg-primary"
               role="button">
               <obj.icon size={20} />{" "}
               <span>{obj.label}</span>

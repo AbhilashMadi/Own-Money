@@ -1,12 +1,12 @@
 import { FC } from "react";
 
 import { ChevronRight, Bell } from "lucide-react";
-import { } from "@ui/badge";
+import NavigationMenu from "@components/custom/Navigation";
 
 
 const DashboardHeader: FC = () => {
   return (
-    <header className="p-4 flex justify-between border-b bg-white dark:bg-">
+    <header className="p-4 flex justify-between border dark:bg-">
       <div className="grow-[1] flex align-middle gap-4">
         <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">Hello @User</h4>
         <div className="flex text-gray-400 gap-4 items-center">
@@ -20,8 +20,9 @@ const DashboardHeader: FC = () => {
           </div>
         </div>
       </div>
-      <div className="grow-[2] flex flex-row-reverse items-center">
+      <div className="grow-[2] flex flex-row-reverse items-center gap-4">
         <Bell />
+        <NavigationMenu />
       </div>
     </header>
   );
