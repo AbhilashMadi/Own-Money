@@ -15,7 +15,7 @@ const DashboardLayout: FC<IDashboardLayout> = (props) => {
       <Sider />
       <main className="flex-1 overflow-y-scroll max-h-screen">
         <DashboardHeader />
-        <div className="bg-muted">
+        <div className="bg-gray-100">
           <div className="overflow-x-hidden p-6 min-h-[calc(100dvh-4rem)]">
             {children}
           </div>
