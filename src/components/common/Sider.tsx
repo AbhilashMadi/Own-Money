@@ -7,7 +7,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@ui/avatar";
 
 const Sider: FC = () => {
   return (
-    <aside className="w-64 transition-all">
+    <aside className="w-56 transition-all">
 
       {/*---- TOGGLE BUTTON ----*/}
       {/* <Button className="md:hidden"><LayoutDashboard /></Button> */}
@@ -28,7 +28,7 @@ const Sider: FC = () => {
         <CardContent className="space-y-2">
           {sidebarConfig.navigations.map((obj) => {
             return <div key={obj.label}
-              className="flex gap-3 p-3 rounded hover:text-white hover:bg-primary"
+              className="flex gap-3 p-2 items-center rounded hover:text-white hover:bg-primary"
               role="button">
               <obj.icon size={20} />{" "}
               <span>{obj.label}</span>
@@ -37,7 +37,7 @@ const Sider: FC = () => {
         </CardContent>
 
         <CardFooter className="space-y-2 flex-col">
-          <div className="flex gap-3 p-3 bg-muted w-full rounded hover:bg-red-400 hover:text-white" role="button">
+          <div className="flex gap-3 items-center p-2 bg-muted w-full rounded hover:bg-red-400 hover:text-white" role="button">
             <sidebarConfig.logout.icon size={20}/>{" "}
             <span>{sidebarConfig.logout.label}</span>
           </div>
