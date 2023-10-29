@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useState, FC, useEffect } from "react";
+import { ReactNode, createContext, useState, FC, useEffect, useContext } from "react";
 
 import { StorageKeys } from "@keys/stoarge.keys";
 import { getLocalStorage, setLocalStorage } from "@helpers/storage.helpers";
@@ -63,3 +63,13 @@ export const ThemProvider: FC<IThemeProvider> = (props) => {
 };
 
 export default ThemeProviderContext;
+
+export const useTheme = () => {
+  const context = useContext(ThemeProviderContext);
+
+  if (context === undefined) {
+    throw new Error("useData must be used within a ContextProvider");
+  }
+
+  return context;
+};

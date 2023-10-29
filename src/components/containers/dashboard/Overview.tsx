@@ -1,32 +1,34 @@
 import { FC } from "react";
 
-import Widget from "@components/custom/Widget";
-import { labels } from "@resources/labels";
-import CreditCard from "@components/containers/atoms/CreditCard";
+import TotalBalance from "@components/containers/atoms/TotalBalance";
+import Goals from "@components/containers/atoms/Goals";
+import UpcomingBills from "@components/containers/atoms/UpcomingBills";
+import RecentTransactions from "@components/containers/atoms/RecentTransactions";
+import Statistics from "@components/containers/atoms/Goals";
+import ExpensesBreakdown from "@components/containers/atoms/ExpensesBreakdown";
 
 
 const Overview: FC = () => {
 
-  return (
-    <>
-      <div className="grid grid-cols-3 gap-6">
-        <Widget widgetTitle={labels.totalBalance}
-          isHeader
-          title="$240,399"
-          headerNavigatin={{ label: labels.allAccounts, href: "#" }}
-          contnt={<>
-            <CreditCard />
-          </>} />
-        <Widget widgetTitle={labels.goals} contnt={<></>} />
-        <Widget widgetTitle={labels.upcomingBills} contnt={<></>} viewAll="/" />
-        <Widget widgetTitle={labels.recentTransactions} contnt={<></>} viewAll="/" />
-        <div className="col-span-2 grid grid-cols-1 gap-6">
-          <Widget widgetTitle={labels.statistics} contnt={<></>} viewAll="/" />
-          <Widget widgetTitle={labels.expensesBreakdown} contnt={<></>} viewAll="/" />
-        </div>
-      </div>
-    </>
-  );
+  return <main className="grid grid-cols-3 gap-4">
+    <div>
+      <TotalBalance />
+    </div>
+    <div>
+      <Goals />
+    </div>
+    <div>
+      <UpcomingBills />
+    </div>
+
+    <div>
+      <RecentTransactions />
+    </div>
+    <div className="col-span-2 flex flex-col gap-4">
+      <Statistics />
+      <ExpensesBreakdown />
+    </div>
+  </main>;
 };
 
 export default Overview;
