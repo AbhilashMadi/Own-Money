@@ -1,6 +1,6 @@
-import { FC, ReactNode } from "react";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@ui/card";
 import { Edit, Goal, Medal } from "lucide-react";
+import { FC, ReactNode } from "react";
 
 const Goals: FC = () => {
 
@@ -9,17 +9,17 @@ const Goals: FC = () => {
     label: string;
     value: string;
   }[] = [
-      {
-        icon: <Medal size={20} className="text-neutral-600 mt-1" />,
-        label: "Target Achieved",
-        value: "$12,500",
-      },
-      {
-        icon: <Goal size={20} className="text-neutral-600 mt-1" />,
-        label: "This month Target",
-        value: "$20,000",
-      },
-    ];
+    {
+      icon: <Medal size={20} className="text-neutral-600 mt-1" />,
+      label: "Target Achieved",
+      value: "$12,500",
+    },
+    {
+      icon: <Goal size={20} className="text-neutral-600 mt-1" />,
+      label: "This month Target",
+      value: "$20,000",
+    },
+  ];
 
   return (
     <>
