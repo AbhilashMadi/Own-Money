@@ -66,7 +66,7 @@ const TotalBalance: FC = () => {
           </Swiper>
         </CardContent>
 
-        <CardFooter className="flex justify-between py-4 transition-all duration-200">
+        <CardFooter className="flex justify-between py-4 transition-all duration-200 border-none">
           <button className="flex items-center" ref={prevRef} disabled={currentSlide === 0}>
             <ChevronLeft size={16} />Previous
           </button>
