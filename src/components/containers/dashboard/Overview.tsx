@@ -4,7 +4,7 @@ import TotalBalance from "@components/containers/atoms/TotalBalance";
 import Goals from "@components/containers/atoms/Goals";
 import UpcomingBills from "@components/containers/atoms/UpcomingBills";
 import RecentTransactions from "@components/containers/atoms/RecentTransactions";
-import Statistics from "@components/containers/atoms/Goals";
+import Statistics from "@components/containers/atoms/Statistics";
 import ExpensesBreakdown from "@components/containers/atoms/ExpensesBreakdown";
 
 
