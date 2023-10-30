@@ -28,7 +28,14 @@ const UpcomingBills: FC = () => {
         <CardContent className="space-y-5">
           {bills.map((bill) => {
             return <div key={bill.subscriptionPeriod} className="flex gap-4">
-              <span className="bg-muted p-4 flex items-center justify-center text-center w-1/5 rounded-md my-auto">{bill.date}</span>
+              <p className="text-center py-3 px-4 bg-muted rounded-md">
+                <span>
+                  {bill.date.split(" ")[0]}
+                </span>
+                <span className="scroll-m-20 text-xl font-semibold tracking-tight">
+                  {bill.date.split(" ")[1]}
+                </span>
+              </p>
               <p className="flex flex-col w-3/5">
                 <span className="font-mont">{bill.company}</span>
                 <span className="scroll-m-20 text-xl font-semibold tracking-tight">{bill.subscriptionPeriod}</span>
