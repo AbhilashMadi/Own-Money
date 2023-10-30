@@ -1,8 +1,45 @@
 import { FC } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@ui/card";
 
-const UpcomingBills:FC = () => {
+const UpcomingBills: FC = () => {
+  const bills = [{
+    date: "Oct \n31",
+    company: "Figma",
+    subscriptionPeriod: "Figma Monthly",
+    lastChange: "Last Change - 30 May, 2023",
+    price: "$150",
+  }, {
+    date: "Oct \n31",
+    company: "Adobe",
+    subscriptionPeriod: "Adobe Yearly",
+    lastChange: "Last Change -  31 Jan, 2023",
+    price: "$559",
+  }];
+
   return (
-    <div>UpcomingBills</div>
+    <>
+      <p className="font-sm text-gray-400 pb-2">Total Balance</p>
+      <Card>
+        <CardHeader>
+          <CardTitle>
+            Bills
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-5">
+          {bills.map((bill) => {
+            return <div key={bill.subscriptionPeriod} className="flex gap-4">
+              <span className="bg-muted p-4 flex items-center justify-center text-center w-1/5 rounded-md my-auto">{bill.date}</span>
+              <p className="flex flex-col w-3/5">
+                <span className="font-mont">{bill.company}</span>
+                <span className="scroll-m-20 text-xl font-semibold tracking-tight">{bill.subscriptionPeriod}</span>
+                <span className="text-neutral-500 text-xs h-1/5">{bill.lastChange}</span>
+              </p>
+              <span className="border-gray-200 p-4 w-1/5 flex items-center justify-center rounded-md font-bold border-[2px] hover:shadow-lg">{bill.price}</span>
+            </div>;
+          })}
+        </CardContent>
+      </Card>
+    </>
   );
 };
 
