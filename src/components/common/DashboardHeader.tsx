@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { ChevronRight, Bell, Sun, Moon, Computer } from "lucide-react";
+import { ChevronRight, Bell, Sun, Moon } from "lucide-react";
 import { Button } from "@ui/button";
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuItem, DropdownMenuContent } from "@ui/dropdown-menu";
 
