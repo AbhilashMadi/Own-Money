@@ -1,6 +1,6 @@
-import { FC } from "react";
-import { Card, CardContent, CardHeader } from "@ui/card";
+import { Card } from "@ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@ui/tabs";
+import { FC } from "react";
 
 const RecentTransactions: FC = () => {
   return (
