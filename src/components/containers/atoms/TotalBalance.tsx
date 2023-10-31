@@ -49,7 +49,7 @@ const TotalBalance: FC = () => {
   return (
     <>
       <p className="font-sm text-gray-400 pb-2">Total Balance</p>
-      <Card>
+      <Card className="hover:shadow-xl">
         <CardHeader>
           <CardTitle>
             $240,399

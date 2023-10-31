@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@ui/card";
+import { ChevronRight } from "lucide-react";
 
 const UpcomingBills: FC = () => {
   const bills = [{
@@ -18,8 +19,14 @@ const UpcomingBills: FC = () => {
 
   return (
     <>
-      <p className="font-sm text-gray-400 pb-2">Total Balance</p>
-      <Card>
+      <div className="flex justify-between">
+        <p className="font-sm text-gray-400 pb-2">Total Balance</p>
+        <button className="text-sm flex gap-1 items-center text-gray-400">
+          View All
+          <ChevronRight size={16}/>
+        </button>
+      </div>
+      <Card className="hover:shadow-xl">
         <CardHeader>
           <CardTitle>
             Bills

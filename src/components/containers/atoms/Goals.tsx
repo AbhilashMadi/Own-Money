@@ -24,7 +24,7 @@ const Goals: FC = () => {
   return (
     <>
       <p className="font-sm text-gray-400 pb-2">Goal</p>
-      <Card>
+      <Card className="hover:shadow-xl">
         <CardHeader className="pt-4">
           <CardTitle className="flex gap-2 items-center justify-between">
             <span>

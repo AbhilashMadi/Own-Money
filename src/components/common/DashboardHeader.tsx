@@ -1,10 +1,16 @@
 import { FC } from "react";
+import { ChevronRight, Bell, Sun, Moon, Computer } from "lucide-react";
+import { Button } from "@ui/button";
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuItem, DropdownMenuContent } from "@ui/dropdown-menu";
 
-import { ChevronRight, Bell } from "lucide-react";
 import NavigationMenu from "@components/custom/Navigation";
+import { useTheme } from "../context/context";
+import { ThemeKeys } from "@types_/constants.enums";
 
 
 const DashboardHeader: FC = () => {
+  const { setTheme } = useTheme();
+
   return (
     <header className="p-4 flex justify-between border border-l-0">
       <div className="grow-[1] flex align-middle gap-4">
@@ -20,8 +26,30 @@ const DashboardHeader: FC = () => {
           </div>
         </div>
       </div>
-      <div className="grow-[2] flex flex-row-reverse items-center gap-4">
-        <Bell />
+      <div className="grow-[2] flex flex-row-reverse items-center gap-2">
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="outline" size="icon">
+              <Sun className="h-[1rem] w-[1rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <Moon className="absolute h-[1rem] w-[1rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            <DropdownMenuItem onClick={() => setTheme(ThemeKeys.LIGHT)}>
+              Light
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => setTheme(ThemeKeys.DARK)}>
+              Dark
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => setTheme(ThemeKeys.SYSTEM)}>
+              System
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+
+        <Button variant="outline" size="icon">
+          <Bell size={16} />
+        </Button>
         <NavigationMenu />
       </div>
     </header>
