@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { ChevronRight, Bell, Sun, Moon } from "lucide-react";
+import { ChevronRight, Bell, Sun, Moon, Minimize, Maximize } from "lucide-react";
 import { Button } from "@ui/button";
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuItem, DropdownMenuContent } from "@ui/dropdown-menu";
 
@@ -9,7 +9,8 @@ import { ThemeKeys } from "@types_/constants.enums";
 
 
 const DashboardHeader: FC = () => {
-  const { setTheme } = useTheme();
+  const { setTheme, isFullScreen, toggleFullScreen } = useTheme();
+
 
   return (
     <header className="p-4 flex justify-between border border-l-0">
@@ -46,7 +47,12 @@ const DashboardHeader: FC = () => {
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
-
+        <Button variant="outline" size="icon">
+          {isFullScreen
+            ? <Minimize onClick={toggleFullScreen} size={20} />
+            : <Maximize onClick={toggleFullScreen} size={20} />
+          }
+        </Button>
         <Button variant="outline" size="icon">
           <Bell size={16} />
         </Button>

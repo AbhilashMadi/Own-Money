@@ -15,11 +15,15 @@ interface IThemeProvider {
 type ThemeProviderState = {
   theme: ThemeKeys;
   setTheme: (theme: Theme) => void;
+  isFullScreen: boolean;
+  toggleFullScreen: () => void;
 }
 
 const intialState: ThemeProviderState = {
   theme: ThemeKeys.SYSTEM,
   setTheme: () => null,
+  isFullScreen: false,
+  toggleFullScreen: () => null,
 };
 
 export const ThemeProviderContext = createContext<ThemeProviderState>(intialState);
@@ -27,6 +31,8 @@ export const ThemeProviderContext = createContext<ThemeProviderState>(intialStat
 export const ThemProvider: FC<IThemeProvider> = (props) => {
   const { children, defaultTheme = ThemeKeys.SYSTEM, storageKey = StorageKeys.UI_THEME } = props;
   const [theme, setTheme] = useState<Theme>(() => (getLocalStorage(storageKey) as Theme) || defaultTheme);
+  const [isFullScreen, setIsFullScreen] = useState<boolean>(false);
+
 
   const onChangeSetTheme = (): void => {
     const root = window.document.documentElement;
@@ -45,6 +51,18 @@ export const ThemProvider: FC<IThemeProvider> = (props) => {
     root.classList.add(theme);
   };
 
+  const toggleFullScreen = (): void => {
+    //element to get fullscreen mode
+    const elem = document.documentElement;
+    if (!isFullScreen) {
+      elem.requestFullscreen();
+      setIsFullScreen(true);
+    } else {
+      document.exitFullscreen();
+      setIsFullScreen(false);
+    }
+  };
+
   useEffect(onChangeSetTheme, [theme]);
 
   const value = {
@@ -53,6 +71,8 @@ export const ThemProvider: FC<IThemeProvider> = (props) => {
       setLocalStorage(storageKey, theme);
       setTheme(theme);
     },
+    toggleFullScreen,
+    isFullScreen,
   };
 
   return (
