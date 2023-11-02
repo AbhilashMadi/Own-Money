@@ -24,7 +24,7 @@ const Overview: FC = () => {
     <div>
       <RecentTransactions />
     </div>
-    <div className="col-span-2 flex flex-col gap-4">
+    <div className="col-span-2 flex flex-col">
       <Statistics />
       <ExpensesBreakdown />
     </div>

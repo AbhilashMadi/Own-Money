@@ -112,7 +112,7 @@ const RecentTransactions: FC = () => {
       <Card className="hover:shadow-xl p-4">
         <Tabs defaultValue="all">
           <TabsList className="w-full [&>*]:flex-grow">
-            <TabsTrigger value="all">Account</TabsTrigger>
+            <TabsTrigger value="all">All</TabsTrigger>
             <TabsTrigger value="revenue">Revenue</TabsTrigger>
             <TabsTrigger value="expenses">Expenses</TabsTrigger>
           </TabsList>
