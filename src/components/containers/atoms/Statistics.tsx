@@ -1,5 +1,5 @@
 import { Column, ColumnConfig } from "@ant-design/plots";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@ui/card";
 import { FC } from "react";
 
 const Statistics: FC = () => {
@@ -72,7 +72,7 @@ const Statistics: FC = () => {
           </CardDescription> */}
         </CardHeader>
         <CardContent>
-          <Column {...config} className="overflow-scroll" />
+          <Column {...config} />
         </CardContent>
       </Card>
     </>

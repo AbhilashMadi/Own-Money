@@ -7,7 +7,7 @@ interface IExpenseCard {
     expense: string;
     price: string;
     status: "increased" | "decreased";
-    statusPercentage: "string";
+    statusPercentage: string;
     icon: ReactNode;
   }
 }
@@ -15,7 +15,7 @@ interface IExpenseCard {
 const ExpenseCard: FC<IExpenseCard> = (props) => {
   const { expenseObj } = props;
 
-  return <div className="flex gap-4 items-center">
+  return <div className="flex gap-4 items-center cursor-pointer p-2">
     <div className="p-4 bg-muted rounded-md">
       {expenseObj.icon}
     </div>
@@ -29,7 +29,7 @@ const ExpenseCard: FC<IExpenseCard> = (props) => {
           : <ArrowDown className="text-green-500" size={16} />}
       </div>
     </div>
-    <MoveRight size={20} />
+    <MoveRight size={20} className="hover:text-primary transition-all" />
   </div>;
 };
 
@@ -38,37 +38,37 @@ const ExpenseCard: FC<IExpenseCard> = (props) => {
 const ExpensesBreakdown: FC = () => {
 
   const expenses: Array<IExpenseCard["expenseObj"]> = [{
-    icon: <Home />,
+    icon: <Home className="text-gray-400" />,
     expense: "Housing",
     price: "$250.00",
     status: "increased",
     statusPercentage: "15%*",
   }, {
-    icon: <Pizza />,
+    icon: <Pizza className="text-gray-400" />,
     expense: "Food",
     price: "$350.00",
     status: "decreased",
     statusPercentage: "08%*",
   }, {
-    icon: <Car />,
+    icon: <Car className="text-gray-400" />,
     expense: "Transportation",
     price: "$50.00",
     status: "decreased",
     statusPercentage: "12%*",
   }, {
-    icon: <Clapperboard />,
+    icon: <Clapperboard className="text-gray-400" />,
     expense: "Entertainment",
     price: "$80.00",
     status: "decreased",
     statusPercentage: "15%*",
   }, {
-    icon: <ShoppingBag />,
+    icon: <ShoppingBag className="text-gray-400" />,
     expense: "Shopping",
     price: "$420.00",
     status: "increased",
     statusPercentage: "25%*",
   }, {
-    icon: <Layout />,
+    icon: <Layout className="text-gray-400" />,
     expense: "Others",
     price: "$650.00",
     status: "increased",
