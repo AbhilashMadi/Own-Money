@@ -10,7 +10,7 @@ import ExpensesBreakdown from "@components/containers/atoms/ExpensesBreakdown";
 
 const Overview: FC = () => {
 
-  return <main className="grid grid-cols-3 gap-4">
+  return <main className="grid gap-4 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
     <div>
       <TotalBalance />
     </div>
@@ -20,11 +20,10 @@ const Overview: FC = () => {
     <div>
       <UpcomingBills />
     </div>
-
     <div>
       <RecentTransactions />
     </div>
-    <div className="col-span-2 flex flex-col">
+    <div className="col-span-1 lg:col-span-2 flex flex-col">
       <Statistics />
       <ExpensesBreakdown />
     </div>
