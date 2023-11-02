@@ -72,7 +72,7 @@ const Statistics: FC = () => {
           </CardDescription> */}
         </CardHeader>
         <CardContent>
-          <Column {...config} />
+          <Column {...config} className="overflow-scroll" />
         </CardContent>
       </Card>
     </>
