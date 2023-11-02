@@ -77,9 +77,12 @@ const ExpensesBreakdown: FC = () => {
 
   return (
     <>
-      <p className="font-sm text-gray-400 pb-2 mt-4">Expenses Breakdown</p>
+      <div className="flex justify-between pb-2 mt-4">
+        <p className="font-sm text-gray-400">Expenses Breakdown</p>
+        <p className="text-sm flex gap-1 items-center text-gray-400">*Compare to last month</p>
+      </div>
       <Card className="hover:shadow-xl">
-        <CardContent className="p-4 grid grid-cols-3 gap-x-20 gap-y-4">
+        <CardContent className="p-4 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-20 gap-y-4">
           {expenses.map((obj, index: number) => {
             return <ExpenseCard key={index} expenseObj={obj} />;
           })}
