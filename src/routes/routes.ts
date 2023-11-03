@@ -17,7 +17,8 @@ const NotFound: LazyExoticComponent<FC> = lazy(() => import("@components/pages/N
 
 ///////DASHBOARD ROUTES//////////
 const Overview: LazyExoticComponent<FC> = lazy(() => import("@components/containers/dashboard/Overview"));
-/////////////////////////////////
+const Balances: LazyExoticComponent<FC> = lazy(() => import("@components/containers/dashboard/Balances"));
+////////////////////////////////
 
 /**
  * Route Objects declaration, each object should have the following properties:
@@ -34,5 +35,6 @@ routesMap.set(Paths.NOT_FOUND, routeObjectGenerator(Paths.NOT_FOUND, NotFound, f
 
 const dashboardRoutes = new Map<string, RouteObject>();
 dashboardRoutes.set(Paths.OVERVIEW, routeObjectGenerator(Paths.OVERVIEW, Overview, false, headers.overview));
+dashboardRoutes.set(Paths.BALANCES, routeObjectGenerator(Paths.BALANCES, Balances, false, headers.Balances));
 
 export { routesMap, dashboardRoutes };
