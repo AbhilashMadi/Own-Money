@@ -16,7 +16,7 @@ fi
 # Detect the current branch
 current_branch=$(git symbolic-ref --short HEAD)
 
-# Prompt the user for a branch name (default to the current branch)
+# Prompt the user for a branch name (default: $current_branch)
 echo "Enter the branch name (default: $current_branch):"
 read branch_name
 
