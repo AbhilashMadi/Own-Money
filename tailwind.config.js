@@ -84,8 +84,8 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       backgroundImage: {
-        "hero-pattern": "url(../src/assets/herobackgrond.svg)",
-        "hero-dark-pattern": "url(../src/assets/darkherobackground.svg)",
+        "hero-pattern": "url(/src/assets/herobackgrond.svg)",
+        "hero-dark-pattern": "url(/src/assets/darkherobackground.svg)",
       },
       boxShadow: {
         widget: ["var(--shadow-widget)"],
