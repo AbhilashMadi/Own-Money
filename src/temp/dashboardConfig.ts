@@ -1,3 +1,4 @@
+import { Paths } from "@/types_/constants.enums";
 import { Wallet, ArrowRightLeft, Receipt, Coins, Crosshair, Settings, LayoutDashboard, LogOut, LucideIcon } from "lucide-react";
 
 type SidebarConfig = {
@@ -9,9 +10,9 @@ type SidebarConfig = {
 export const sidebarConfig: SidebarConfig = {
   logo: "",
   navigations: [
-    { icon: LayoutDashboard, path: "", label: "Overview" },
-    { icon: Wallet, path: "", label: "Balances" },
-    { icon: ArrowRightLeft, path: "", label: "Transactions" },
+    { icon: LayoutDashboard, path: Paths.OVERVIEW, label: "Overview" },
+    { icon: Wallet, path: Paths.BALANCES, label: "Balances" },
+    { icon: ArrowRightLeft, path: Paths.TRANSACTIONS, label: "Transactions" },
     { icon: Receipt, path: "", label: "Bills" },
     { icon: Coins, path: "", label: "Expenses" },
     { icon: Crosshair, path: "", label: "Goals" },

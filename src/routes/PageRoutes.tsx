@@ -12,11 +12,11 @@ import AppContext from "@context/AppContext";
 const PageRoutes: FC = () => {
 
   return (
-    <AppContext>
-      <ThemProvider>
-        <BrowserRouter>
+    <BrowserRouter>
+      <AppContext>
+        <ThemProvider>
           <Routes>
-            {/* static routes (unprotected) | (unprotected) */}
+            static routes (unprotected) | (unprotected)
             {[...routesMap.values()].map((page: RouteObject) => {
               return <Route index={page.path === Paths.LANDING}
                 key={page.path}
@@ -38,9 +38,9 @@ const PageRoutes: FC = () => {
                 </DashboardLayout >} />;
             })}
           </Routes>
-        </BrowserRouter>
-      </ThemProvider>
-    </AppContext>
+        </ThemProvider>
+      </AppContext>
+    </BrowserRouter>
   );
 };
 

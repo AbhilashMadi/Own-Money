@@ -12,7 +12,7 @@ export enum Paths {
   OTP = "/otp",
   OVERVIEW = "/dashboard/overview",
   BALANCES = "/dashboard/overview/balances",
-  ACCOUNT_DETAILS = "/dashboard/overview/balances/:account-id",
+  ACCOUNT_DETAILS = "/dashboard/overview/balances/:accountId",
   TRANSACTIONS = "/dashboard/transactions",
   BILLS = "/dashboard/bills",
   EXPENSES = "/dashboard/expenses",

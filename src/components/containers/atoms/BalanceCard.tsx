@@ -1,7 +1,9 @@
 import { FC } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@ui/card";
-import { Button } from "@ui/button";
+import { buttonVariants } from "@ui/button";
 import { ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Paths } from "@/types_/constants.enums";
 
 const BalanceCard: FC = () => {
 
@@ -30,10 +32,10 @@ const BalanceCard: FC = () => {
 
       <CardFooter className="flex justify-between py-2">
         <button className="text-primary">Remove</button>
-        <Button>
+        <Link to={Paths.ACCOUNT_DETAILS.replace(":accountId", "accountIdToNavigate")} className={buttonVariants({ variant: "default" })}>
           Details
           <ChevronRight size={16} />
-        </Button>
+        </Link>
       </CardFooter>
     </Card>
   );

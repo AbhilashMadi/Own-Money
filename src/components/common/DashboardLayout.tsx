@@ -11,7 +11,7 @@ const DashboardLayout: FC<IDashboardLayout> = (props) => {
   const { children } = props;
 
   return (
-    <div className="flex antialiased scroll-smooth font-inter bg-gray-100">
+    <div className="flex antialiased scroll-smooth font-inter">
       <Sider />
       <main className="flex-1 overflow-y-scroll max-h-screen">
         <DashboardHeader />
