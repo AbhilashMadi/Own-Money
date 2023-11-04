@@ -1,14 +1,27 @@
-import { Button } from "@ui/button";
-import { Card, CardContent, CardFooter } from "@ui/card";
 import { FC } from "react";
+import { Card, CardContent, CardFooter } from "@ui/card";
+import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@ui/table";
+import { Button } from "@ui/button";
+import { useParams } from "react-router-dom";
 
 type Detail = {
   label: string;
   value: string;
 }
 
+type Invoice = {
+  date: string;
+  status: "Completed" | "Pending" | "Failed",
+  transactionType: string;
+  receipt: string;
+  amount: string;
+}
+
 const Detail: FC<{ detail: Detail }> = (props) => {
   const { detail } = props;
+  const { accountId } = useParams();
+
+  console.log(accountId);
 
   return <div className="p-4 space-y-1">
     <p className="text-sm text-muted-foreground">{detail.label}</p>
@@ -34,21 +47,97 @@ const AccountDetails: FC = () => {
     value: "1356 2343 4534",
   }];
 
+  const invoices: Invoice[] = [{
+    date: "4 Oct 2023",
+    status: "Completed",
+    transactionType: "Credit",
+    receipt: "43543545645DFS",
+    amount: "$160",
+  }, {
+    date: "4 Oct 2023",
+    status: "Completed",
+    transactionType: "Credit",
+    receipt: "43543545645DFS",
+    amount: "$160",
+  }, {
+    date: "4 Oct 2023",
+    status: "Completed",
+    transactionType: "Credit",
+    receipt: "43543545645DFS",
+    amount: "$160",
+  }, {
+    date: "4 Oct 2023",
+    status: "Completed",
+    transactionType: "Credit",
+    receipt: "43543545645DFS",
+    amount: "$160",
+  }, {
+    date: "4 Oct 2023",
+    status: "Completed",
+    transactionType: "Credit",
+    receipt: "43543545645DFS",
+    amount: "$160",
+  }, {
+    date: "4 Oct 2023",
+    status: "Completed",
+    transactionType: "Credit",
+    receipt: "43543545645DFS",
+    amount: "$160",
+  }];
+
   return (
-    <>
-      <p className="text-gray-400 pb-2">Account Details</p>
-      <Card className="shadow-lg">
-        <CardContent className="p-4 grid grid-cols-3">
-          {details.map((detail: Detail, index: number) => {
-            return <Detail detail={detail} key={index} />;
-          })}
-        </CardContent>
-        <CardFooter>
-          <Button>Edit Details</Button>
-          <Button className="ml-6" variant="outline">Remove</Button>
-        </CardFooter>
-      </Card>
-    </>
+    <main className="space-y-6">
+      {/* Details Card */}
+      <div>
+        <p className="text-gray-400 pb-2">Account Details</p>
+        <Card className="shadow-lg">
+          <CardContent className="p-4 grid grid-cols-3">
+            {details.map((detail: Detail, index: number) => {
+              return <Detail detail={detail} key={index} />;
+            })}
+          </CardContent>
+          <CardFooter>
+            <Button>Edit Details</Button>
+            <Button className="ml-6" variant="outline">Remove</Button>
+          </CardFooter>
+        </Card>
+      </div>
+
+      {/* Transaction History */}
+      <div>
+        <p className="text-gray-400 pb-2">Transactions History</p>
+        <Card className="shadow-lg">
+          <CardContent className="p-4">
+            <Table>
+              <TableCaption>
+                A list of September month Transactions
+                <Button variant="link">Load more ...</Button>
+              </TableCaption>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>Date</TableHead>
+                  <TableHead>Status</TableHead>
+                  <TableHead>Transaction Type</TableHead>
+                  <TableHead>Receipt</TableHead>
+                  <TableHead>Amount</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {invoices.map((invoice: Invoice, index: number) => {
+                  return <TableRow key={index}>
+                    <TableCell>{invoice.date}</TableCell>
+                    <TableCell>{invoice.status}</TableCell>
+                    <TableCell>{invoice.transactionType}</TableCell>
+                    <TableCell>{invoice.receipt}</TableCell>
+                    <TableCell>{invoice.amount}</TableCell>
+                  </TableRow>;
+                })}
+              </TableBody>
+            </Table>
+          </CardContent>
+        </Card>
+      </div>
+    </main>
   );
 };
 

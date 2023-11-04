@@ -34,7 +34,6 @@ const ExpenseCard: FC<IExpenseCard> = (props) => {
 };
 
 
-
 const ExpensesBreakdown: FC = () => {
 
   const expenses: Array<IExpenseCard["expenseObj"]> = [{
