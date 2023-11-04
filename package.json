@@ -9,7 +9,8 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:rules": "eslint  . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --rulesdir rules",
     "preview": "vite preview",
-    "lint:fix": "eslint --fix . --ext ts,tsx"
+    "lint:fix": "eslint --fix . --ext ts,tsx",
+    "push": "sh push.sh"
   },
   "dependencies": {
     "@ant-design/plots": "^1.2.5",
