@@ -19,6 +19,7 @@ const NotFound: LazyExoticComponent<FC> = lazy(() => import("@components/pages/N
 const Overview: LazyExoticComponent<FC> = lazy(() => import("@components/containers/dashboard/Overview"));
 const Balances: LazyExoticComponent<FC> = lazy(() => import("@components/containers/dashboard/Balances"));
 const AccountDetails: LazyExoticComponent<FC> = lazy(() => import("@components/containers/dashboard/AccountDetails"));
+const Transactions: LazyExoticComponent<FC> = lazy(() => import("@components/containers/dashboard/Transactions"));
 ////////////////////////////////
 
 /**
@@ -38,5 +39,6 @@ const dashboardRoutes = new Map<string, RouteObject>();
 dashboardRoutes.set(Paths.OVERVIEW, routeObjectGenerator(Paths.OVERVIEW, Overview, false, headers.overview));
 dashboardRoutes.set(Paths.BALANCES, routeObjectGenerator(Paths.BALANCES, Balances, false, headers.Balances));
 dashboardRoutes.set(Paths.ACCOUNT_DETAILS, routeObjectGenerator(Paths.ACCOUNT_DETAILS, AccountDetails, false, headers.AccountDetails));
+dashboardRoutes.set(Paths.TRANSACTIONS, routeObjectGenerator(Paths.TRANSACTIONS, Transactions, false, headers.Transactions));
 
 export { routesMap, dashboardRoutes };
