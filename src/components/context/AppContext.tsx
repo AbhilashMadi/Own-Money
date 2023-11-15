@@ -17,7 +17,7 @@ export const AppContext = createContext<{
   state: AppContextState;
   dispatch: React.Dispatch<AppAction>;
   navigateToRoute: (path: string) => void;
-} | undefined>(undefined);
+    } | undefined>(undefined);
 
 const AppContextProvider: FC<IAppContext> = (props) => {
   const { children } = props;
