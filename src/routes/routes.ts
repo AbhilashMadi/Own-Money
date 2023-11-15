@@ -35,10 +35,10 @@ routesMap.set(Paths.AUTHONTICATION, routeObjectGenerator(Paths.AUTHONTICATION, A
 routesMap.set(Paths.OTP, routeObjectGenerator(Paths.OTP, OTPForm, false, headers.otpVerification));
 routesMap.set(Paths.NOT_FOUND, routeObjectGenerator(Paths.NOT_FOUND, NotFound, false, headers.notFound));
 
-const dashboardRoutes = new Map<string, RouteObject>();
-dashboardRoutes.set(Paths.OVERVIEW, routeObjectGenerator(Paths.OVERVIEW, Overview, false, headers.overview));
-dashboardRoutes.set(Paths.BALANCES, routeObjectGenerator(Paths.BALANCES, Balances, false, headers.Balances));
-dashboardRoutes.set(Paths.ACCOUNT_DETAILS, routeObjectGenerator(Paths.ACCOUNT_DETAILS, AccountDetails, false, headers.AccountDetails));
-dashboardRoutes.set(Paths.TRANSACTIONS, routeObjectGenerator(Paths.TRANSACTIONS, Transactions, false, headers.Transactions));
+//////DASHBOARD ROUTES////////
+routesMap.set(Paths.OVERVIEW, routeObjectGenerator(Paths.OVERVIEW, Overview, true, headers.overview));
+routesMap.set(Paths.BALANCES, routeObjectGenerator(Paths.BALANCES, Balances, true, headers.balances));
+routesMap.set(Paths.ACCOUNT_DETAILS, routeObjectGenerator(Paths.ACCOUNT_DETAILS, AccountDetails, true, headers.AccountDetails));
+routesMap.set(Paths.TRANSACTIONS, routeObjectGenerator(Paths.TRANSACTIONS, Transactions, true, headers.transactions));
 
-export { routesMap, dashboardRoutes };
+export { routesMap };
