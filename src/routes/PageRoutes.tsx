@@ -1,12 +1,11 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { FC } from "react";
 
-import { routesMap, dashboardRoutes } from "@routes/routes";
+import { routesMap } from "@routes/routes";
 import { RouteObject } from "@types_/routes.types";
 import Layout from "@components/common/Layout";
-import DashboardLayout from "@components/common/DashboardLayout";
-import { Paths } from "@types_/constants.enums.ts";
 import { ThemProvider } from "@context/ThemeProvider";
+import RequireAuth from "@components/common/RequireAuth";
 import AppContext from "@context/AppContext";
 
 const PageRoutes: FC = () => {
@@ -16,26 +15,16 @@ const PageRoutes: FC = () => {
       <AppContext>
         <ThemProvider>
           <Routes>
-            static routes (unprotected) | (unprotected)
-            {[...routesMap.values()].map((page: RouteObject) => {
-              return <Route index={page.path === Paths.LANDING}
-                key={page.path}
-                path={page.path}
-                element={page.protectedRoute
-                  ? <p>Protected Route</p>
+            {[...routesMap.values()].map((route: RouteObject) => {
+              return <Route path={route.path}
+                element={route.protectedRoute
+                  ? <RequireAuth title={route.name}>
+                    <route.element />
+                  </RequireAuth>
                   : <Layout>
-                    <page.element />
-                  </Layout>} />;
-            })}
-
-            {/* dashboard route (protected) */}
-            {[...dashboardRoutes.values()].map((page: RouteObject) => {
-              return <Route
-                key={page.name}
-                path={page.path}
-                element={<DashboardLayout>
-                  <page.element />
-                </DashboardLayout >} />;
+                    <route.element />
+                  </Layout>}
+              />;
             })}
           </Routes>
         </ThemProvider>
