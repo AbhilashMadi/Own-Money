@@ -15,11 +15,12 @@ const Authontication: LazyExoticComponent<FC> = lazy(() => import("@components/p
 const OTPForm: LazyExoticComponent<FC> = lazy(() => import("@components/forms/OTPForm"));
 const NotFound: LazyExoticComponent<FC> = lazy(() => import("@components/pages/NotFound"));
 
-///////DASHBOARD ROUTES//////////
+///////DASHBOARD PAGES//////////
 const Overview: LazyExoticComponent<FC> = lazy(() => import("@components/containers/dashboard/Overview"));
 const Balances: LazyExoticComponent<FC> = lazy(() => import("@components/containers/dashboard/Balances"));
 const AccountDetails: LazyExoticComponent<FC> = lazy(() => import("@components/containers/dashboard/AccountDetails"));
 const Transactions: LazyExoticComponent<FC> = lazy(() => import("@components/containers/dashboard/Transactions"));
+const Bills: LazyExoticComponent<FC> = lazy(() => import("@components/containers/dashboard/Bills"));
 ////////////////////////////////
 
 /**
@@ -40,5 +41,7 @@ routesMap.set(Paths.OVERVIEW, routeObjectGenerator(Paths.OVERVIEW, Overview, tru
 routesMap.set(Paths.BALANCES, routeObjectGenerator(Paths.BALANCES, Balances, true, headers.balances));
 routesMap.set(Paths.ACCOUNT_DETAILS, routeObjectGenerator(Paths.ACCOUNT_DETAILS, AccountDetails, true, headers.AccountDetails));
 routesMap.set(Paths.TRANSACTIONS, routeObjectGenerator(Paths.TRANSACTIONS, Transactions, true, headers.transactions));
+routesMap.set(Paths.BILLS, routeObjectGenerator(Paths.BILLS, Bills, true, headers.Bills));
+/////////////////////////////
 
 export { routesMap };

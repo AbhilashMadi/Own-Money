@@ -13,7 +13,7 @@ export const sidebarConfig: SidebarConfig = {
     { icon: LayoutDashboard, path: Paths.OVERVIEW, label: "Overview" },
     { icon: Wallet, path: Paths.BALANCES, label: "Balances" },
     { icon: ArrowRightLeft, path: Paths.TRANSACTIONS, label: "Transactions" },
-    { icon: Receipt, path: "", label: "Bills" },
+    { icon: Receipt, path: Paths.BILLS, label: "Bills" },
     { icon: Coins, path: "", label: "Expenses" },
     { icon: Crosshair, path: "", label: "Goals" },
     { icon: Settings, path: "", label: "Settings" },
