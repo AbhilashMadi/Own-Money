@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { Card, CardContent } from "@ui/card";
+import { Button } from "@ui/button";
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@ui/tabs";
 import { Shirt } from "lucide-react";
@@ -27,7 +28,9 @@ const Transactions: FC = () => {
             <Card>
               <CardContent className="p-2">
                 <Table>
-                  <TableCaption>Table Caption</TableCaption>
+                  <TableCaption>
+                    <Button variant={"link"}>Load more...</Button>
+                  </TableCaption>
                   <TableHeader>
                     <TableRow>
                       <TableHead>Items</TableHead>

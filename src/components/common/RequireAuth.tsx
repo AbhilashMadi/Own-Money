@@ -11,7 +11,7 @@ interface IRequireAuth {
 const RequireAuth: FC<IRequireAuth> = (props) => {
   const { children, title } = props;
   const from = useLocation();
-  const auth = false;
+  const auth = true;
 
   document.title = title || "";
 
