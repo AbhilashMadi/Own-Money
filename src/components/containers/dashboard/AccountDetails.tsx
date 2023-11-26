@@ -1,8 +1,7 @@
-import { FC } from "react";
+import { Button } from "@ui/button";
 import { Card, CardContent, CardFooter } from "@ui/card";
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@ui/table";
-import { Button } from "@ui/button";
-import { useParams } from "react-router-dom";
+import { FC } from "react";
 
 type Detail = {
   label: string;
