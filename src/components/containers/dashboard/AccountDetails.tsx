@@ -19,9 +19,7 @@ type Invoice = {
 
 const Detail: FC<{ detail: Detail }> = (props) => {
   const { detail } = props;
-  const { accountId } = useParams();
-
-  console.log(accountId);
+  // const { accountId } = useParams();
 
   return <div className="p-4 space-y-1">
     <p className="text-sm text-muted-foreground">{detail.label}</p>
