@@ -23,7 +23,7 @@ const UpcomingBills: FC = () => {
         <p className="font-sm text-gray-400 pb-2">Total Balance</p>
         <button className="text-sm flex gap-1 items-center text-gray-400">
           View All
-          <ChevronRight size={16}/>
+          <ChevronRight size={16} />
         </button>
       </div>
       <Card className="hover:shadow-xl">
