@@ -100,7 +100,7 @@ const SignUpForm: FC = () => {
         </Form>
       </CardContent>
       <CardFooter className="flex justify-between gap-4">
-        <Button className="w-1/2" variant="outline" type="reset" onClick={form.reset}>
+        <Button className="w-1/2" variant="outline" type="reset" onClick={() => form.reset()}>
           {labels.reset}
         </Button>
         <Button className="w-1/2" type="submit" onClick={form.handleSubmit(onSubmit)}>
