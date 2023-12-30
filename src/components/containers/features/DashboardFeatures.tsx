@@ -11,19 +11,19 @@ const DashboardFeatures: FC = () => {
   const [ref, isInView] = useInView();
 
   return (
-    <section className="p-8 space-y-8" ref={ref}>
+    <section className="space-y-8 p-8" ref={ref}>
       <div
         className={cn(
-          "flex items-center justify-between flex-wrap gap-4",
+          "flex flex-wrap items-center justify-between gap-4",
           isInView && "animate-fade-up animate-delay-100",
         )}
       >
-        <h2 className="scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-4xl bg-gradient-to-br from-zinc-900 to-neutral-50 dark:to-zinc-900 dark:from-neutral-50 inline-block text-transparent bg-clip-text">
+        <h2 className="inline-block scroll-m-20 bg-gradient-to-br from-zinc-900 to-neutral-50 bg-clip-text text-3xl font-extrabold tracking-tight text-transparent dark:from-neutral-50 dark:to-zinc-900 lg:text-4xl">
           {featuresConfig.headline}
         </h2>
         <Link
           to="#"
-          className="flex gap-3 font-medium underline underline-offset-4 text-primary"
+          className="flex gap-3 font-medium text-primary underline underline-offset-4"
         >
           {featuresConfig.link}
           <ChevronRight className="animate-fade-right" />

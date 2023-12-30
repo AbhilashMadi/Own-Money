@@ -48,7 +48,7 @@ const TotalBalance: FC = () => {
 
   return (
     <>
-      <p className="font-sm text-gray-400 pb-2">Total Balance</p>
+      <p className="font-sm pb-2 text-gray-400">Total Balance</p>
       <Card className="hover:shadow-xl">
         <CardHeader>
           <CardTitle>$240,399</CardTitle>
@@ -66,7 +66,7 @@ const TotalBalance: FC = () => {
           </Swiper>
         </CardContent>
 
-        <CardFooter className="flex justify-between py-4 transition-all duration-200 border-none">
+        <CardFooter className="flex justify-between border-none py-4 transition-all duration-200">
           <button
             className="flex items-center"
             ref={prevRef}

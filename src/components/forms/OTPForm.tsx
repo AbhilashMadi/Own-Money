@@ -15,7 +15,7 @@ import { Input } from "@ui/input";
 
 const OTPForm: FC = () => {
   return (
-    <div className="h-screen grid place-items-center animate-fade-down">
+    <div className="grid h-screen animate-fade-down place-items-center">
       <section>
         <Card className="w-[300px] md:w-[400px]">
           <CardHeader>
@@ -27,28 +27,28 @@ const OTPForm: FC = () => {
               <div>
                 <Input
                   type="text"
-                  className="h-12 w-14 invalid:animate-shake animate-thrice"
+                  className="h-12 w-14 animate-thrice invalid:animate-shake"
                   pattern="[0-9]"
                 />
               </div>
               <div>
                 <Input
                   type="text"
-                  className="h-12 w-14 invalid:animate-shake animate-thrice"
+                  className="h-12 w-14 animate-thrice invalid:animate-shake"
                   pattern="[0-9]"
                 />
               </div>
               <div>
                 <Input
                   type="text"
-                  className="h-12 w-14 invalid:animate-shake animate-thrice"
+                  className="h-12 w-14 animate-thrice invalid:animate-shake"
                   pattern="[0-9]"
                 />
               </div>
               <div>
                 <Input
                   type="text"
-                  className="h-12 w-14 invalid:animate-shake animate-thrice"
+                  className="h-12 w-14 animate-thrice invalid:animate-shake"
                   pattern="[0-9]"
                 />{" "}
               </div>

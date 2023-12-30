@@ -26,27 +26,27 @@ const DashboardHeader: FC = () => {
 
   return (
     <header
-      className="p-3 flex justify-between border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 left-0 
-      right-0 bg-clip-padding backdrop-filter bg-opacity-50 z-30"
+      className="sticky left-0 right-0 top-0 z-30 flex justify-between border-b bg-background/95 bg-opacity-50 
+      bg-clip-padding p-3 backdrop-blur backdrop-filter supports-[backdrop-filter]:bg-background/60"
     >
-      <div className="grow-[1] flex align-middle gap-4">
+      <div className="flex grow-[1] gap-4 align-middle">
         {pathname === Paths.OVERVIEW && (
           <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
             Hello @User
           </h4>
         )}
-        <div className="flex text-gray-400 gap-4 items-center">
+        <div className="flex items-center gap-4 text-gray-400">
           <span className="flex">
             <ChevronRight size={20} />
             <ChevronRight size={20} className="-mx-3" />
           </span>
-          <div className="text-inherit text-xs">
+          <div className="text-xs text-inherit">
             <p>September 20 2023</p>
             <p>Monday</p>
           </div>
         </div>
       </div>
-      <div className="grow-[2] flex flex-row-reverse items-center gap-2">
+      <div className="flex grow-[2] flex-row-reverse items-center gap-2">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline" size="icon">

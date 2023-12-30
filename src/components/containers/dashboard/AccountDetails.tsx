@@ -29,7 +29,7 @@ const Detail: FC<{ detail: Detail }> = (props) => {
   // const { accountId } = useParams();
 
   return (
-    <div className="p-4 space-y-1">
+    <div className="space-y-1 p-4">
       <p className="text-sm text-muted-foreground">{detail.label}</p>
       <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
         {detail.value}
@@ -111,9 +111,9 @@ const AccountDetails: FC = () => {
     <main className="space-y-6">
       {/* Details Card */}
       <div>
-        <p className="text-gray-400 pb-2">Account Details</p>
+        <p className="pb-2 text-gray-400">Account Details</p>
         <Card className="shadow-lg">
-          <CardContent className="p-4 grid grid-cols-3">
+          <CardContent className="grid grid-cols-3 p-4">
             {details.map((detail: Detail, index: number) => {
               return <Detail detail={detail} key={index} />;
             })}
@@ -129,7 +129,7 @@ const AccountDetails: FC = () => {
 
       {/* Transaction History */}
       <div>
-        <p className="text-gray-400 pb-2">Transactions History</p>
+        <p className="pb-2 text-gray-400">Transactions History</p>
         <Card className="shadow-lg">
           <CardContent className="p-4">
             <Table>

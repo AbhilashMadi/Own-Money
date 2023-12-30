@@ -19,14 +19,14 @@ const IconCard: FC<IIconCard> = (props) => {
     <div
       ref={ref}
       className={cn(
-        "self-stretch font-medium underline underline-offset-4 text-primary flex flex-col cursor-pointer",
+        "flex cursor-pointer flex-col self-stretch font-medium text-primary underline underline-offset-4",
         isInView && "animate-fade-up animate-delay-100",
       )}
     >
       <img
         src={item.iconImg}
         alt={item.link}
-        className="my-auto h-[10rem] w-auto hover:-translate-y-3 drop-shadow-xl mt-4 transition-all"
+        className="my-auto mt-4 h-[10rem] w-auto drop-shadow-xl transition-all hover:-translate-y-3"
       />
       <Link to={item.href} className="mt-8">
         {item.link}

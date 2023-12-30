@@ -69,7 +69,7 @@ const Statistics: FC = () => {
 
   return (
     <>
-      <p className="font-sm text-gray-400 pb-2">Statistics</p>
+      <p className="font-sm pb-2 text-gray-400">Statistics</p>
       <Card className="hover:shadow-xl">
         <CardHeader>
           <CardTitle>Comparision</CardTitle>

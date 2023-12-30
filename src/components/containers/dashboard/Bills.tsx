@@ -29,7 +29,7 @@ const Bills: FC = () => {
               <TableBody>
                 <TableRow>
                   <TableCell>
-                    <div className="p-3 text-xl text-center text-medium bg-muted rounded-md font-medium space-x-1">
+                    <div className="text-medium space-x-1 rounded-md bg-muted p-3 text-center text-xl font-medium">
                       <span>DEC</span>
                       <span>31</span>
                     </div>

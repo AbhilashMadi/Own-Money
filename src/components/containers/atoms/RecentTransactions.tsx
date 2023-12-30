@@ -21,21 +21,21 @@ const ExpensesCard: FC<{ obj: Transaction }> = (props) => {
   const { obj } = props;
 
   return (
-    <div className="flex gap-4 py-2 items-center border-b">
-      <div className="bg-muted p-4 grid items-center rounded-lg">
+    <div className="flex items-center gap-4 border-b py-2">
+      <div className="grid items-center rounded-lg bg-muted p-4">
         {obj.icon}
       </div>
       <div className="grow">
         <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
           {obj.title}
         </h4>
-        <p className="text-gray-400 text-sm">{obj.category}</p>
+        <p className="text-sm text-gray-400">{obj.category}</p>
       </div>
       <div>
         <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
           {obj.price}
         </h4>
-        <span className="text-gray-400 text-sm">{obj?.date}</span>
+        <span className="text-sm text-gray-400">{obj?.date}</span>
       </div>
     </div>
   );
@@ -127,8 +127,8 @@ const RecentTransactions: FC = () => {
 
   return (
     <>
-      <p className="font-sm text-gray-400 pb-2">Recent Transactions</p>
-      <Card className="hover:shadow-xl p-4">
+      <p className="font-sm pb-2 text-gray-400">Recent Transactions</p>
+      <Card className="p-4 hover:shadow-xl">
         <Tabs defaultValue="all">
           <TabsList className="w-full [&>*]:flex-grow">
             <TabsTrigger value="all">All</TabsTrigger>

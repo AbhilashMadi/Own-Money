@@ -19,7 +19,7 @@ const DashboardFeatureCard: FC<IDashbordFeatureCard> = (props) => {
     <Card
       ref={ref}
       className={cn(
-        "hover:shadow-lg transition-shadow",
+        "transition-shadow hover:shadow-lg",
         inView && "animate-fade-up animate-delay-100",
       )}
     >

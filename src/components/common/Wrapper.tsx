@@ -12,7 +12,7 @@ const Wrapper: FC<IWrapper> = (props) => {
   return (
     <main
       className={cn(
-        "mx-auto w-full max-w-screen-xl px-2.5 md:px-20 space-y-12",
+        "mx-auto w-full max-w-screen-xl space-y-12 px-2.5 md:px-20",
         className,
       )}
     >

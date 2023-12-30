@@ -11,11 +11,11 @@ const Redirection: FC = () => {
   });
 
   return (
-    <section className="p-8 space-y-8 text-center" ref={ref}>
+    <section className="space-y-8 p-8 text-center" ref={ref}>
       <div className="space-y-5">
         <h2
           className={cn(
-            "scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-4xl bg-gradient-to-tr from-orange-600 to-orange-300 inline-block text-transparent bg-clip-text",
+            "inline-block scroll-m-20 bg-gradient-to-tr from-orange-600 to-orange-300 bg-clip-text text-3xl font-extrabold tracking-tight text-transparent lg:text-4xl",
             isInView && "animate-fade-up",
           )}
         >
@@ -23,7 +23,7 @@ const Redirection: FC = () => {
         </h2>
         <p
           className={cn(
-            "md:w-3/4 mx-auto leading-6 [&:not(:first-child)]:mt-6 font-mont",
+            "mx-auto font-mont leading-6 md:w-3/4 [&:not(:first-child)]:mt-6",
             isInView && "animate-fade-up animate-delay-100",
           )}
         >
@@ -31,7 +31,7 @@ const Redirection: FC = () => {
         </p>
       </div>
 
-      <div className="flex flex-wrap align-middle justify-center gap-10">
+      <div className="flex flex-wrap justify-center gap-10 align-middle">
         {redirectionConfig.redirections.map((item) => {
           return <IconCard item={item} />;
         })}

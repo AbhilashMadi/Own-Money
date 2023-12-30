@@ -23,7 +23,7 @@ const Sider: FC = () => {
       {/* <Button className="md:hidden"><LayoutDashboard /></Button> */}
       {/*-----------------------*/}
 
-      <Card className="rounded-none min-h-screen">
+      <Card className="min-h-screen rounded-none">
         <CardHeader>
           <CardTitle
             role="button"
@@ -31,7 +31,7 @@ const Sider: FC = () => {
           >
             <span className="font-bold">OWN</span>
             <span className="font-light"> MONEY</span>
-            <p className="text-sm text-foreground font-mont tracking-wider font-medium">
+            <p className="font-mont text-sm font-medium tracking-wider text-foreground">
               Version 1.0
             </p>
           </CardTitle>
@@ -45,7 +45,7 @@ const Sider: FC = () => {
             return (
               <button
                 key={obj.label}
-                className="flex gap-3 p-2 items-center rounded hover:text-white hover:bg-primary w-full"
+                className="flex w-full items-center gap-3 rounded p-2 hover:bg-primary hover:text-white"
                 onClick={() => navigateToRoute(obj.path)}
               >
                 <obj.icon size={20} /> <span>{obj.label}</span>
@@ -54,16 +54,16 @@ const Sider: FC = () => {
           })}
         </CardContent>
 
-        <CardFooter className="space-y-2 flex-col">
+        <CardFooter className="flex-col space-y-2">
           <div
-            className="flex gap-3 items-center p-2 bg-muted w-full rounded hover:bg-red-400 hover:text-white"
+            className="flex w-full items-center gap-3 rounded bg-muted p-2 hover:bg-red-400 hover:text-white"
             role="button"
           >
             <sidebarConfig.logout.icon size={20} />{" "}
             <span>{sidebarConfig.logout.label}</span>
           </div>
           <div
-            className="flex justify-between space-x-4 bg-muted py-3 px-4 rounded"
+            className="flex justify-between space-x-4 rounded bg-muted px-4 py-3"
             role="button"
           >
             <Avatar className="my-auto">
