@@ -5,4 +5,4 @@ export type RouteObject = {
   element: LazyExoticComponent<FC>;
   protectedRoute: boolean;
   name: string;
-}
+};

@@ -6,10 +6,7 @@ import PageRoutes from "@routes/PageRoutes";
 
 const App: FC = () => {
   return (
-    <Suspense fallback={<LoadingBar
-      progress={100}
-      color="#f17020"
-      shadow />}>
+    <Suspense fallback={<LoadingBar progress={100} color="#f17020" shadow />}>
       <PageRoutes />
     </Suspense>
   );

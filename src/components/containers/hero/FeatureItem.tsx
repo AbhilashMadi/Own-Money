@@ -13,8 +13,12 @@ const FeatureItem: FC<IFeatureItem> = (props) => {
     <div className="flex gap-4 animate-fade-up animate-delay-300">
       <span className="self-start pt-1 text-primary">{item.icon}</span>
       <div>
-        <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">{item.headline}</h4>
-        <p className="leading-6 [&:not(:first-child)]:mt-2 font-mont">{item.description}</p>
+        <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+          {item.headline}
+        </h4>
+        <p className="leading-6 [&:not(:first-child)]:mt-2 font-mont">
+          {item.description}
+        </p>
       </div>
     </div>
   );

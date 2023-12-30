@@ -1,11 +1,21 @@
 import { Paths } from "@/types_/constants.enums";
-import { Wallet, ArrowRightLeft, Receipt, Coins, Crosshair, Settings, LayoutDashboard, LogOut, LucideIcon } from "lucide-react";
+import {
+  Wallet,
+  ArrowRightLeft,
+  Receipt,
+  Coins,
+  Crosshair,
+  Settings,
+  LayoutDashboard,
+  LogOut,
+  LucideIcon,
+} from "lucide-react";
 
 type SidebarConfig = {
   logo: string;
-  navigations: { icon: LucideIcon, path: string, label: string }[];
-  logout: { icon: LucideIcon, label: string };
-}
+  navigations: { icon: LucideIcon; path: string; label: string }[];
+  logout: { icon: LucideIcon; label: string };
+};
 
 export const sidebarConfig: SidebarConfig = {
   logo: "",

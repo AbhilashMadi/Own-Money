@@ -51,27 +51,37 @@ const TotalBalance: FC = () => {
       <p className="font-sm text-gray-400 pb-2">Total Balance</p>
       <Card className="hover:shadow-xl">
         <CardHeader>
-          <CardTitle>
-            $240,399
-          </CardTitle>
+          <CardTitle>$240,399</CardTitle>
         </CardHeader>
 
         <CardContent>
           <Swiper {...swiperOptions}>
             {[...Array(3)].map((_, index) => {
-              return <SwiperSlide key={index}>
-                <CreditCard />
-              </SwiperSlide>;
+              return (
+                <SwiperSlide key={index}>
+                  <CreditCard />
+                </SwiperSlide>
+              );
             })}
           </Swiper>
         </CardContent>
 
         <CardFooter className="flex justify-between py-4 transition-all duration-200 border-none">
-          <button className="flex items-center" ref={prevRef} disabled={currentSlide === 0}>
-            <ChevronLeft size={16} />Previous
+          <button
+            className="flex items-center"
+            ref={prevRef}
+            disabled={currentSlide === 0}
+          >
+            <ChevronLeft size={16} />
+            Previous
           </button>
-          <button className="flex items-center" ref={nextRef} disabled={currentSlide === 2}>
-            Next<ChevronRight size={16} />
+          <button
+            className="flex items-center"
+            ref={nextRef}
+            disabled={currentSlide === 2}
+          >
+            Next
+            <ChevronRight size={16} />
           </button>
         </CardFooter>
       </Card>

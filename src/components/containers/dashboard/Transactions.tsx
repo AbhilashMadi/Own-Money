@@ -1,7 +1,15 @@
 import { FC } from "react";
 import { Card, CardContent } from "@ui/card";
 import { Button } from "@ui/button";
-import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@ui/table";
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@ui/tabs";
 import { Shirt } from "lucide-react";
 
@@ -20,8 +28,12 @@ const Transactions: FC = () => {
         <Tabs defaultValue={TransactionsTabKeys.ALL}>
           <TabsList>
             <TabsTrigger value={TransactionsTabKeys.ALL}>All</TabsTrigger>
-            <TabsTrigger value={TransactionsTabKeys.EXPENSES}>Expenses</TabsTrigger>
-            <TabsTrigger value={TransactionsTabKeys.REVENUE}>Revenue</TabsTrigger>
+            <TabsTrigger value={TransactionsTabKeys.EXPENSES}>
+              Expenses
+            </TabsTrigger>
+            <TabsTrigger value={TransactionsTabKeys.REVENUE}>
+              Revenue
+            </TabsTrigger>
           </TabsList>
 
           <TabsContent value={TransactionsTabKeys.ALL}>
@@ -43,7 +55,9 @@ const Transactions: FC = () => {
 
                   <TableBody>
                     <TableRow>
-                      <TableCell><Shirt size={20} className="text-gray-600" /></TableCell>
+                      <TableCell>
+                        <Shirt size={20} className="text-gray-600" />
+                      </TableCell>
                       <TableCell>ACN Fashion Mall</TableCell>
                       <TableCell>05 Nov, 2023</TableCell>
                       <TableCell>Credit Card</TableCell>
@@ -54,10 +68,8 @@ const Transactions: FC = () => {
               </CardContent>
             </Card>
           </TabsContent>
-          <TabsContent value={TransactionsTabKeys.EXPENSES}>
-          </TabsContent>
-          <TabsContent value={TransactionsTabKeys.REVENUE}>
-          </TabsContent>
+          <TabsContent value={TransactionsTabKeys.EXPENSES}></TabsContent>
+          <TabsContent value={TransactionsTabKeys.REVENUE}></TabsContent>
         </Tabs>
       </div>
     </main>

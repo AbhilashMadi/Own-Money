@@ -16,9 +16,21 @@ const IconCard: FC<IIconCard> = (props) => {
   });
 
   return (
-    <div ref={ref} className={cn("self-stretch font-medium underline underline-offset-4 text-primary flex flex-col cursor-pointer", isInView && "animate-fade-up animate-delay-100")}>
-      <img src={item.iconImg} alt={item.link} className="my-auto h-[10rem] w-auto hover:-translate-y-3 drop-shadow-xl mt-4 transition-all"/>
-      <Link to={item.href} className="mt-8">{item.link}</Link>
+    <div
+      ref={ref}
+      className={cn(
+        "self-stretch font-medium underline underline-offset-4 text-primary flex flex-col cursor-pointer",
+        isInView && "animate-fade-up animate-delay-100",
+      )}
+    >
+      <img
+        src={item.iconImg}
+        alt={item.link}
+        className="my-auto h-[10rem] w-auto hover:-translate-y-3 drop-shadow-xl mt-4 transition-all"
+      />
+      <Link to={item.href} className="mt-8">
+        {item.link}
+      </Link>
     </div>
   );
 };

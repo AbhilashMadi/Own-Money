@@ -1,4 +1,3 @@
-
 export type AppContextState = {
   something: string;
   navigate: (path: string) => void;

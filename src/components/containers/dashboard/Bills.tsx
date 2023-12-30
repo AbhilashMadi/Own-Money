@@ -30,7 +30,8 @@ const Bills: FC = () => {
                 <TableRow>
                   <TableCell>
                     <div className="p-3 text-xl text-center text-medium bg-muted rounded-md font-medium space-x-1">
-                      <span>DEC</span><span>31</span>
+                      <span>DEC</span>
+                      <span>31</span>
                     </div>
                   </TableCell>
                   <TableCell></TableCell>

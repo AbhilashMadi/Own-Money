@@ -15,9 +15,7 @@ const Layout: FC<ILayout> = (props) => {
     <div className="min-h-screen w-full font-inter scroll-smooth antialiased">
       <AnnouncementBar />
       {/* <Navbar /> */}
-      <Wrapper>
-        {children}
-      </Wrapper>
+      <Wrapper>{children}</Wrapper>
       <Footer />
     </div>
   );

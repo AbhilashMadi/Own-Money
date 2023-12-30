@@ -16,7 +16,13 @@ const DashboardFeatureCard: FC<IDashbordFeatureCard> = (props) => {
   });
 
   return (
-    <Card ref={ref} className={cn("hover:shadow-lg transition-shadow", inView && "animate-fade-up animate-delay-100")}>
+    <Card
+      ref={ref}
+      className={cn(
+        "hover:shadow-lg transition-shadow",
+        inView && "animate-fade-up animate-delay-100",
+      )}
+    >
       <CardHeader>
         <CardTitle>{item.header}</CardTitle>
       </CardHeader>

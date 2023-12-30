@@ -1,3 +1,1 @@
-export enum ClientKeys {
-
-}
+export enum ClientKeys {}

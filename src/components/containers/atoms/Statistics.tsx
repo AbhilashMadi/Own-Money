@@ -3,7 +3,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@ui/card";
 import { FC } from "react";
 
 const Statistics: FC = () => {
-  const generateRandomData = (months: string[], days: number, minValue: number, maxValue: number): {
+  const generateRandomData = (
+    months: string[],
+    days: number,
+    minValue: number,
+    maxValue: number,
+  ): {
     name: string;
     date: string;
     value: number;
@@ -14,9 +19,11 @@ const Statistics: FC = () => {
       value: number;
     }[] = [];
 
-    months.forEach(month => {
+    months.forEach((month) => {
       for (let day = 1; day <= days; day++) {
-        const randomValue = Math.floor(Math.random() * (maxValue - minValue + 1) + minValue);
+        const randomValue = Math.floor(
+          Math.random() * (maxValue - minValue + 1) + minValue,
+        );
         data.push({
           name: month,
           date: day.toString().padStart(2, "0"),
@@ -65,9 +72,7 @@ const Statistics: FC = () => {
       <p className="font-sm text-gray-400 pb-2">Statistics</p>
       <Card className="hover:shadow-xl">
         <CardHeader>
-          <CardTitle>
-            Comparision
-          </CardTitle>
+          <CardTitle>Comparision</CardTitle>
           {/* <CardDescription className="text-xs">
           </CardDescription> */}
         </CardHeader>

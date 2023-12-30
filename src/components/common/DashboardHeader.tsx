@@ -1,23 +1,40 @@
 import { FC } from "react";
-import { ChevronRight, Bell, Sun, Moon, Minimize, Maximize } from "lucide-react";
+import {
+  ChevronRight,
+  Bell,
+  Sun,
+  Moon,
+  Minimize,
+  Maximize,
+} from "lucide-react";
 import { Button } from "@ui/button";
-import { DropdownMenu, DropdownMenuTrigger, DropdownMenuItem, DropdownMenuContent } from "@ui/dropdown-menu";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuItem,
+  DropdownMenuContent,
+} from "@ui/dropdown-menu";
 
 import NavigationMenu from "@components/custom/Navigation";
 import { useTheme } from "../context/context";
 import { Paths, ThemeKeys } from "@types_/constants.enums";
 import { useLocation } from "react-router-dom";
 
-
 const DashboardHeader: FC = () => {
   const { setTheme, isFullScreen, toggleFullScreen } = useTheme();
   const { pathname } = useLocation();
 
   return (
-    <header className="p-3 flex justify-between border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 left-0 
-      right-0 bg-clip-padding backdrop-filter bg-opacity-50 z-30">
+    <header
+      className="p-3 flex justify-between border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 left-0 
+      right-0 bg-clip-padding backdrop-filter bg-opacity-50 z-30"
+    >
       <div className="grow-[1] flex align-middle gap-4">
-        {pathname === Paths.OVERVIEW && <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">Hello @User</h4>}
+        {pathname === Paths.OVERVIEW && (
+          <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+            Hello @User
+          </h4>
+        )}
         <div className="flex text-gray-400 gap-4 items-center">
           <span className="flex">
             <ChevronRight size={20} />
@@ -50,10 +67,11 @@ const DashboardHeader: FC = () => {
           </DropdownMenuContent>
         </DropdownMenu>
         <Button variant="outline" size="icon">
-          {isFullScreen
-            ? <Minimize onClick={toggleFullScreen} size={20} />
-            : <Maximize onClick={toggleFullScreen} size={20} />
-          }
+          {isFullScreen ? (
+            <Minimize onClick={toggleFullScreen} size={20} />
+          ) : (
+            <Maximize onClick={toggleFullScreen} size={20} />
+          )}
         </Button>
         <Button variant="outline" size="icon">
           <Bell size={16} />

@@ -4,7 +4,7 @@ export type Highlight = {
   icon: ReactNode;
   headline: string;
   description: string;
-}
+};
 
 export type HeroConfig = {
   background: string;

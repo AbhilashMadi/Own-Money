@@ -1,3 +1,1 @@
-export enum ServerKeys {
-
-}
+export enum ServerKeys {}

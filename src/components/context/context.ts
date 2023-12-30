@@ -1,6 +1,6 @@
 import { useContext } from "react";
 
-import {AppContext} from "@context/AppContext";
+import { AppContext } from "@context/AppContext";
 import { ThemeProviderContext } from "@context/ThemeProvider";
 
 //Theme Context return theme,setTheme
@@ -18,7 +18,7 @@ export function useTheme() {
 export function useData() {
   const context = useContext(AppContext);
 
-  if(context === undefined){
+  if (context === undefined) {
     throw new Error("useData must be used within a ContextProvider");
   }
 
