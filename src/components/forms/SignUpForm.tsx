@@ -123,7 +123,6 @@ const SignUpForm: FC = () => {
         >
           {labels.getOTP}
         </Button>
-        <div className="pt-2 p-4 container md:text-md sm:text-sm"></div>
       </CardFooter>
     </Card>
   );
