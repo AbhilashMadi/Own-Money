@@ -39,6 +39,10 @@ const Transactions: LazyExoticComponent<FC> = lazy(
 const Bills: LazyExoticComponent<FC> = lazy(
   () => import("@components/containers/dashboard/Bills"),
 );
+const Expenses: LazyExoticComponent<FC> = lazy(
+  () => import("@components/containers/dashboard/Expenses"),
+);
+
 ////////////////////////////////
 
 /**
@@ -78,8 +82,8 @@ routesMap.set(
 );
 routesMap.set(
   Paths.BALANCES,
-  routeObjectGenerator(Paths.BALANCES, Balances, true, headers.balances),
-);
+  routeObjectGenerator(Paths.BALANCES, Balances, true, headers.balances));
+
 routesMap.set(
   Paths.ACCOUNT_DETAILS,
   routeObjectGenerator(
@@ -87,8 +91,8 @@ routesMap.set(
     AccountDetails,
     true,
     headers.AccountDetails,
-  ),
-);
+  ));
+
 routesMap.set(
   Paths.TRANSACTIONS,
   routeObjectGenerator(
@@ -96,12 +100,15 @@ routesMap.set(
     Transactions,
     true,
     headers.transactions,
-  ),
-);
+  ));
+
 routesMap.set(
   Paths.BILLS,
-  routeObjectGenerator(Paths.BILLS, Bills, true, headers.Bills),
-);
+  routeObjectGenerator(Paths.BILLS, Bills, true, headers.Bills));
+
+routesMap.set(
+  Paths.EXPENSES,
+  routeObjectGenerator(Paths.EXPENSES, Expenses, true, headers.expenses));
 /////////////////////////////
 
 export { routesMap };

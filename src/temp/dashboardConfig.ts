@@ -13,7 +13,7 @@ import {
 
 type SidebarConfig = {
   logo: string;
-  navigations: { icon: LucideIcon; path: string; label: string }[];
+  navigations: { icon: LucideIcon; path: Paths | ""; label: string }[];
   logout: { icon: LucideIcon; label: string };
 };
 
@@ -24,7 +24,7 @@ export const sidebarConfig: SidebarConfig = {
     { icon: Wallet, path: Paths.BALANCES, label: "Balances" },
     { icon: ArrowRightLeft, path: Paths.TRANSACTIONS, label: "Transactions" },
     { icon: Receipt, path: Paths.BILLS, label: "Bills" },
-    { icon: Coins, path: "", label: "Expenses" },
+    { icon: Coins, path: Paths.EXPENSES, label: "Expenses" },
     { icon: Crosshair, path: "", label: "Goals" },
     { icon: Settings, path: "", label: "Settings" },
   ],

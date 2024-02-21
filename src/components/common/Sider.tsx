@@ -1,5 +1,10 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 
+import { cn } from "@/lib/utils";
+import { useData } from "@context/context";
+import { sidebarConfig } from "@temp/dashboardConfig";
+import { Paths } from "@types_/constants.enums";
+import { Avatar, AvatarFallback, AvatarImage } from "@ui/avatar";
 import {
   Card,
   CardContent,
@@ -9,13 +14,15 @@ import {
   CardTitle,
 } from "@ui/card";
 import { CalendarDays } from "lucide-react";
-import { sidebarConfig } from "@temp/dashboardConfig";
-import { Avatar, AvatarFallback, AvatarImage } from "@ui/avatar";
-import { useData } from "@context/context";
-import { Paths } from "@types_/constants.enums";
 
 const Sider: FC = () => {
   const { navigateToRoute } = useData();
+  const [activeRoute, setActiveRoute] = useState<Paths>(Paths.OVERVIEW);
+
+  const handleRouteClick = (path: Paths): void => {
+    navigateToRoute(path);
+    setActiveRoute(path);
+  };
 
   return (
     <aside className="w-56 transition-all">
@@ -45,8 +52,9 @@ const Sider: FC = () => {
             return (
               <button
                 key={obj.label}
-                className="flex w-full items-center gap-3 rounded p-2 hover:bg-primary hover:text-white"
-                onClick={() => navigateToRoute(obj.path)}
+                className={cn("flex w-full items-center gap-3 rounded p-2 hover:bg-primary/[0.5] hover:text-white transition-colors duration-150 ease-in",
+                  activeRoute === obj.path ? "bg-primary text-white" : "")}
+                onClick={() => handleRouteClick(obj.path)}
               >
                 <obj.icon size={20} /> <span>{obj.label}</span>
               </button>
@@ -68,7 +76,8 @@ const Sider: FC = () => {
           >
             <Avatar className="my-auto">
               <AvatarImage
-                src="https://media.licdn.com/dms/image/D5603AQHZ07VC0tKOUw/profile-displayphoto-shrink_800_800/0/1672216526335?e=1703116800&v=beta&t=QbUz2Dd42XoYRUrSh1dbs-nQWwDGAamCyvs7uiOGZ6Q"
+                src=""
+                // onError="this.onError=null;this.src=null"
                 alt="@AbhilashKumar"
               />
               <AvatarFallback>AK</AvatarFallback>
