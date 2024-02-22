@@ -7,10 +7,10 @@ import path from "node:path";
 export default defineConfig({
   plugins: [react()],
 
-  /**
-   * Declare the paths for files which are needed.
-   * NOTE: also need to declare the paths as same as in paths.json
-   */
+  server: {
+    port: 3000,
+    open: true,
+  },
   resolve: {
     alias: {
       // Define your aliases here
