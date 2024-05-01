@@ -1,9 +1,11 @@
-import { LazyExoticComponent, FC } from "react";
+import { FC, LazyExoticComponent } from "react";
 
-export function routeObjectGenerator(path: string,
+export function routeObjectGenerator(
+  path: string,
   element: LazyExoticComponent<FC>,
   protectedRoute: boolean,
-  name: string) {
+  name: string,
+) {
   return {
     path,
     element,

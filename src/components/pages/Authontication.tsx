@@ -8,8 +8,11 @@ import { TabKeys } from "@types_/constants.enums";
 
 const Authontication: FC = () => {
   return (
-    <div className="grid place-items-center min-h-screen">
-      <Tabs defaultValue={TabKeys.LOGIN} className="w-[300px] md:w-[400px] animate-fade-down">
+    <div className="grid min-h-screen place-items-center">
+      <Tabs
+        defaultValue={TabKeys.LOGIN}
+        className="w-[300px] animate-fade-down md:w-[400px]"
+      >
         <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value={TabKeys.LOGIN}>{headers.logIn}</TabsTrigger>
           <TabsTrigger value={TabKeys.SIGNUP}>{headers.signUp}</TabsTrigger>

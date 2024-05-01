@@ -1,32 +1,9 @@
+import { generateRandomData } from "@/helpers/generators.helpers";
 import { Column, ColumnConfig } from "@ant-design/plots";
 import { Card, CardContent, CardHeader, CardTitle } from "@ui/card";
 import { FC } from "react";
 
 const Statistics: FC = () => {
-  const generateRandomData = (months: string[], days: number, minValue: number, maxValue: number): {
-    name: string;
-    date: string;
-    value: number;
-  }[] => {
-    const data: {
-      name: string;
-      date: string;
-      value: number;
-    }[] = [];
-
-    months.forEach(month => {
-      for (let day = 1; day <= days; day++) {
-        const randomValue = Math.floor(Math.random() * (maxValue - minValue + 1) + minValue);
-        data.push({
-          name: month,
-          date: day.toString().padStart(2, "0"),
-          value: randomValue,
-        });
-      }
-    });
-
-    return data;
-  };
 
   const config: ColumnConfig = {
     data: generateRandomData(["September", "October"], 15, 100, 1000),
@@ -62,14 +39,10 @@ const Statistics: FC = () => {
 
   return (
     <>
-      <p className="font-sm text-gray-400 pb-2">Statistics</p>
+      <p className="font-sm pb-2 text-gray-400">Statistics</p>
       <Card className="hover:shadow-xl">
         <CardHeader>
-          <CardTitle>
-            Comparision
-          </CardTitle>
-          {/* <CardDescription className="text-xs">
-          </CardDescription> */}
+          <CardTitle>Comparision</CardTitle>
         </CardHeader>
         <CardContent>
           <Column {...config} />

@@ -15,11 +15,11 @@ const RequireAuth: FC<IRequireAuth> = (props) => {
 
   document.title = title || "";
 
-  return auth
-    ? <DashboardLayout>
-      {children}
-    </DashboardLayout>
-    : <Navigate to={Paths.AUTHONTICATION} state={{ from }} replace />;
+  return auth ? (
+    <DashboardLayout>{children}</DashboardLayout>
+  ) : (
+    <Navigate to={Paths.AUTHONTICATION} state={{ from }} replace />
+  );
 };
 
 export default RequireAuth;

@@ -9,22 +9,28 @@ import RequireAuth from "@components/common/RequireAuth";
 import AppContext from "@context/AppContext";
 
 const PageRoutes: FC = () => {
-
   return (
     <BrowserRouter>
       <AppContext>
         <ThemProvider>
           <Routes>
             {[...routesMap.values()].map((route: RouteObject) => {
-              return <Route path={route.path}
-                element={route.protectedRoute
-                  ? <RequireAuth title={route.name}>
-                    <route.element />
-                  </RequireAuth>
-                  : <Layout>
-                    <route.element />
-                  </Layout>}
-              />;
+              return (
+                <Route
+                  path={route.path}
+                  element={
+                    route.protectedRoute ? (
+                      <RequireAuth title={route.name}>
+                        <route.element />
+                      </RequireAuth>
+                    ) : (
+                      <Layout>
+                        <route.element />
+                      </Layout>
+                    )
+                  }
+                />
+              );
             })}
           </Routes>
         </ThemProvider>

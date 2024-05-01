@@ -1,4 +1,11 @@
-import { ReactNode, createContext, useState, FC, useEffect, useContext } from "react";
+import {
+  ReactNode,
+  createContext,
+  useState,
+  FC,
+  useEffect,
+  useContext,
+} from "react";
 
 import { StorageKeys } from "@keys/stoarge.keys";
 import { getLocalStorage, setLocalStorage } from "@helpers/storage.helpers";
@@ -7,9 +14,9 @@ import { ThemeKeys } from "@types_/constants.enums";
 type Theme = ThemeKeys;
 
 interface IThemeProvider {
-  children: ReactNode,
-  defaultTheme?: Theme,
-  storageKey?: string,
+  children: ReactNode;
+  defaultTheme?: Theme;
+  storageKey?: string;
 }
 
 type ThemeProviderState = {
@@ -17,7 +24,7 @@ type ThemeProviderState = {
   setTheme: (theme: Theme) => void;
   isFullScreen: boolean;
   toggleFullScreen: () => void;
-}
+};
 
 const intialState: ThemeProviderState = {
   theme: ThemeKeys.SYSTEM,
@@ -26,13 +33,19 @@ const intialState: ThemeProviderState = {
   toggleFullScreen: () => null,
 };
 
-export const ThemeProviderContext = createContext<ThemeProviderState>(intialState);
+export const ThemeProviderContext =
+  createContext<ThemeProviderState>(intialState);
 
 export const ThemProvider: FC<IThemeProvider> = (props) => {
-  const { children, defaultTheme = ThemeKeys.SYSTEM, storageKey = StorageKeys.UI_THEME } = props;
-  const [theme, setTheme] = useState<Theme>(() => (getLocalStorage(storageKey) as Theme) || defaultTheme);
+  const {
+    children,
+    defaultTheme = ThemeKeys.SYSTEM,
+    storageKey = StorageKeys.UI_THEME,
+  } = props;
+  const [theme, setTheme] = useState<Theme>(
+    () => (getLocalStorage(storageKey) as Theme) || defaultTheme,
+  );
   const [isFullScreen, setIsFullScreen] = useState<boolean>(false);
-
 
   const onChangeSetTheme = (): void => {
     const root = window.document.documentElement;

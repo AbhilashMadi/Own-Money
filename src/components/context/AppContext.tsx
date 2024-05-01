@@ -13,11 +13,14 @@ const initialState: AppContextState = {
   navigate: () => null,
 };
 
-export const AppContext = createContext<{
-  state: AppContextState;
-  dispatch: React.Dispatch<AppAction>;
-  navigateToRoute: (path: string) => void;
-    } | undefined>(undefined);
+export const AppContext = createContext<
+  | {
+      state: AppContextState;
+      dispatch: React.Dispatch<AppAction>;
+      navigateToRoute: (path: string) => void;
+    }
+  | undefined
+>(undefined);
 
 const AppContextProvider: FC<IAppContext> = (props) => {
   const { children } = props;
@@ -25,7 +28,9 @@ const AppContextProvider: FC<IAppContext> = (props) => {
 
   const navigate = useNavigate();
 
-  {/* Context global functions functions */ }
+  {
+    /* Context global functions functions */
+  }
   const navigateToRoute = (path: string) => {
     return navigate(path);
   };
@@ -36,11 +41,7 @@ const AppContextProvider: FC<IAppContext> = (props) => {
     navigateToRoute,
   };
 
-  return (
-    <AppContext.Provider value={values}>
-      {children}
-    </AppContext.Provider>
-  );
+  return <AppContext.Provider value={values}>{children}</AppContext.Provider>;
 };
 
 export default AppContextProvider;

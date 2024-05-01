@@ -11,12 +11,12 @@ const DashboardLayout: FC<IDashboardLayout> = (props) => {
   const { children } = props;
 
   return (
-    <div className="flex antialiased scroll-smooth font-inter">
+    <div className="flex scroll-smooth font-inter antialiased">
       <Sider />
-      <main className="flex-1 overflow-y-scroll max-h-screen">
+      <main className="max-h-screen flex-1 overflow-y-scroll">
         <DashboardHeader />
         <div className="dark:bg-muted">
-          <div className="overflow-x-hidden p-6 min-h-[calc(100dvh-4rem)]">
+          <div className="min-h-[calc(100dvh-4rem)] overflow-x-hidden p-6">
             {children}
           </div>
         </div>

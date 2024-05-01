@@ -1,6 +1,5 @@
-
-export const labels:{ [key: string]: string } = {
-  email:"Email",
+export const labels: { [key: string]: string } = {
+  email: "Email",
   password: "Password",
   enter: "Enter",
   confirmPassword: "Confirm Password",
@@ -16,5 +15,5 @@ export const labels:{ [key: string]: string } = {
   recentTransactions: "Recent Transaction",
   statistics: "Statistics",
   expensesBreakdown: "Expenses Breakdown",
-  allAccounts:"All Accounts",
+  allAccounts: "All Accounts",
 };

@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 
 /**
- * @description 
+ * @description
  * for declaring key use snake_case format
  */
 

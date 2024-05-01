@@ -2,7 +2,14 @@ import { headers } from "@resources/headers";
 import { labels } from "@resources/labels";
 import { text } from "@resources/text";
 import { Button } from "@ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@ui/card";
 import { Input } from "@ui/input";
 import { FC } from "react";
 import { useForm } from "react-hook-form";
@@ -19,17 +26,20 @@ import {
   FormMessage,
 } from "@ui/form";
 
-const formSchema = z.object({
-  email: z.string().email({ message: "Email must be a valid email" }),
-  password: z.string().min(8, { message: "Password should be at least 8 characters" }),
-  confirmPassword: z.string().min(8, { message: "Password should be at least 8 characters" }),
-}).refine(
-  ({ password, confirmPassword }) => password === confirmPassword,
-  {
+const formSchema = z
+  .object({
+    email: z.string().email({ message: "Email must be a valid email" }),
+    password: z
+      .string()
+      .min(8, { message: "Password should be at least 8 characters" }),
+    confirmPassword: z
+      .string()
+      .min(8, { message: "Password should be at least 8 characters" }),
+  })
+  .refine(({ password, confirmPassword }) => password === confirmPassword, {
     message: "Passwords don't match",
     path: ["confirmPassword"],
-  },
-);
+  });
 
 const SignUpForm: FC = () => {
   const form = useForm<z.infer<typeof formSchema>>({
@@ -49,9 +59,7 @@ const SignUpForm: FC = () => {
     <Card>
       <CardHeader>
         <CardTitle>{headers.details}</CardTitle>
-        <CardDescription>
-          {text.enterDetails}
-        </CardDescription>
+        <CardDescription>{text.enterDetails}</CardDescription>
       </CardHeader>
       <CardContent className="space-y-2">
         <Form {...form}>
@@ -100,10 +108,19 @@ const SignUpForm: FC = () => {
         </Form>
       </CardContent>
       <CardFooter className="flex justify-between gap-4">
-        <Button className="w-1/2" variant="outline" type="reset" onClick={() => form.reset()}>
+        <Button
+          className="w-1/2"
+          variant="outline"
+          type="reset"
+          onClick={() => form.reset()}
+        >
           {labels.reset}
         </Button>
-        <Button className="w-1/2" type="submit" onClick={form.handleSubmit(onSubmit)}>
+        <Button
+          className="w-1/2"
+          type="submit"
+          onClick={form.handleSubmit(onSubmit)}
+        >
           {labels.getOTP}
         </Button>
       </CardFooter>

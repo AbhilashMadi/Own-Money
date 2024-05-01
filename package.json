@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 3000",
+    "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:rules": "eslint  . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --rulesdir rules",
@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@ant-design/plots": "^1.2.5",
+    "@hookform/resolvers": "^3.3.3",
     "@radix-ui/react-avatar": "^1.0.4",
     "@radix-ui/react-dropdown-menu": "^2.0.6",
     "@radix-ui/react-hover-card": "^1.0.7",
@@ -51,6 +52,8 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "postcss": "^8.4.31",
+    "prettier": "^3.1.1",
+    "prettier-plugin-tailwindcss": "^0.5.10",
     "tailwindcss": "^3.3.3",
     "tailwindcss-animated": "^1.0.1",
     "typescript": "^5.2.2",

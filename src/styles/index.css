@@ -37,10 +37,10 @@
     --radius: 0.5rem;
 
     --font-inter: "Inter", sans-serif;
-    --font-mont: 'Montserrat', sans-serif;
+    --font-mont: "Montserrat", sans-serif;
     --font-mono: "Space Mono", monospace;
 
-    --shadow-widget: 0px 20px 25px 0px rgba(76, 103, 100, 0.10);
+    --shadow-widget: 0px 20px 25px 0px rgba(76, 103, 100, 0.1);
   }
 
   .dark {
